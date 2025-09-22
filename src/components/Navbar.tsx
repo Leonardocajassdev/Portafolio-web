@@ -32,8 +32,13 @@ const Navbar: React.FC = () => {
         {/* Links de navegación a la derecha */}
         <ul className="flex gap-8 font-medium">
           <li>
-            <a href="#about" className="text-white text-lg hover:text-blue-500 transition">
+            <a href="#inicio" className="text-white text-lg hover:text-blue-500 transition">
               Inicio
+            </a>
+          </li>
+          <li>
+            <a href="#sobremi" className="text-white text-lg hover:text-blue-500 transition">
+              Sobre mi
             </a>
           </li>
           <li>
@@ -44,6 +49,11 @@ const Navbar: React.FC = () => {
           <li>
             <a href="#skills" className="text-white text-lg hover:text-blue-500 transition">
               Skills
+            </a>
+          </li>
+          <li>
+            <a href="#contacto" className="text-white text-lg hover:text-blue-500 transition">
+              Contacto
             </a>
           </li>
         </ul>
