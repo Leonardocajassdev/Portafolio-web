@@ -10,7 +10,7 @@ interface CardProjectProps {
 
 const CardProject: React.FC<CardProjectProps> = ({ image, title, description, tags, label }) => {
   return (
-    <div className="bg-gray-900 rounded-2xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform">
+    <div className="bg-gray-900 rounded-2xl p-6 flex flex-col hover:scale-103 transition-transform">
       {/* Imagen con etiqueta */}
       <div className="relative mb-4">
       <img
@@ -40,7 +40,7 @@ const CardProject: React.FC<CardProjectProps> = ({ image, title, description, ta
             key={index}
             className="border border-white/30 rounded-full bg-white/5 backdrop-blur-sm 
                        hover:scale-105 hover:border-white 
-                       px-2 py-0.5 text-xs"
+                       px-2 py-0.5 text-xm"
           >
             {tag}
           </span>

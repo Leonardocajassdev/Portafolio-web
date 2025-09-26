@@ -32,7 +32,7 @@ const Proyectos: React.FC = () => {
           inspírate con mis proyectos!
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-6">
           {/* Card GestiAgro (ocupa más ancho) */}
           <div className="lg:col-span-2 md:col-span-2">
             <CardProject
@@ -43,9 +43,9 @@ const Proyectos: React.FC = () => {
               Fue desarrollada por tres colaboradores de la misma universidad bajo metodologías ágiles
               y control de versiones, incorporando principios de seguridad como control de acceso
               y gestión de cuentas. El sistema se comunica mediante una API, sigue el patrón MVC
-              y utiliza una base de datos en la nube. Este ha sido el proyecto más grande desarrollado
-              por mi persona hasta la fecha, representando un gran reto que nos dejó valiosas enseñanzas y aprendizaje."
-              tags={["React", "JavaScript", "Tailwind"]}
+              y utiliza una base de datos en la nube. Este ha sido el proyecto más grande en el que he participado
+              hasta la fecha, representando un gran reto que nos dejó valioso aprendizaje."
+              tags={["Node.js","npm","React","JavaScript","TailwindCSS", "Python","PostgreSQL","Git","GitHub","..."]}
             />
           </div>
 
@@ -53,12 +53,15 @@ const Proyectos: React.FC = () => {
           <CardProject
             image={CanculatorPy}
             title="Calculadora Python"
-            description="Segundo proyecto de ejemplo con las mismas características."
-            tags={["Node.js", "Express", "MongoDB"]}
+            description="Calculadora desarrollada en Python con Tkinter,
+            que permite realizar operaciones básicas (+, −, ×, ÷), uso de paréntesis y
+            cálculo de raíces cuadradas. Incluye botones de borrado, limpieza total y
+            una interfaz gráfica adaptable con estilos personalizados."
+            tags={["Python"]}
           />
           <CardProject
             image={CanculatorPy}
-            title="Calculadora Python"
+            title="CRUD Empleados"
             description="Segundo proyecto de ejemplo con las mismas características."
             tags={["Node.js", "Express", "MongoDB"]}
           />
