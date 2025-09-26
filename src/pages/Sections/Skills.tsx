@@ -8,12 +8,13 @@ import {
   import { BiLogoVisualStudio } from "react-icons/bi";
   
   
-  import SkillCard from "../components/SkillCard";
+  import SkillCard from "../../components/SkillCard";
   
   const categories = [
     {
       title: "Frontend",
       skills: [
+        { icon: <SiTypescript color="#3178C6" size={45} />, name: "TypeScript" },
         { icon: <SiHtml5 color="#E34F26" size={45} />, name: "HTML" },
         { icon: <SiCss3 color="#1572B6" size={45} />, name: "CSS" },
         { icon: <SiJavascript color="#F7DF1E" size={45} />, name: "JavaScript" },
@@ -26,19 +27,13 @@ import {
       {
         title: "Backend",
         skills: [
+          { icon: <SiPython color="#3776AB" size={45} />, name: "Python" },
           { icon: <SiPhp color="#777BB4" size={45} />, name: "PHP" },
           { icon: <SiNodedotjs color="#68A063" size={45} />, name: "NodeJS" },
           { icon: <SiMysql color="#4479A1" size={45} />, name: "MySQL" },
           { icon: <SiMongodb color="#47A248" size={45} />, name: "MongoDB" },
           { icon: <SiApache color="#D22128" size={45} />, name: "Apache" },
           { icon: <SiPostgresql color="#336791" size={45} />, name: "PostgreSQL" },
-        ],
-      },
-      {
-        title: "Aprendiendo",
-        skills: [
-          { icon: <SiPython color="#3776AB" size={45} />, name: "Python" },
-          { icon: <SiTypescript color="#3178C6" size={45} />, name: "TypeScript" },
         ],
       },
       {
@@ -63,7 +58,7 @@ import {
         {/* Fondo azul difuminado */}
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-l-full z-0"></div>
 
-        <div className="max-w-7xl mx-auto p-4 relative z-10">
+        <div className="max-w-7xl mx-auto p-4 relative z-10 ">
           <h2 
           className="font-extrabold mb-12 text-3xl text-white"
           style={{ textShadow: '0 0 8px rgba(255, 255, 255, 0.6)' }}
@@ -75,7 +70,7 @@ import {
             Estoy emocionado de seguir aprendiendo cada vez más, tanto de estas como de nuevas herramientas que surjan en el mundo del desarrollo web.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 ">
             {categories.map((cat) => (
               <SkillCard key={cat.title} title={cat.title} skills={cat.skills} />
             ))}

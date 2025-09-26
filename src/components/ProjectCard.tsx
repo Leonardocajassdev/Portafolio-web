@@ -31,7 +31,7 @@ const CardProject: React.FC<CardProjectProps> = ({ image, title, description, ta
       <h3 className="text-2xl font-bold mb-3 text-blue-400">{title}</h3>
 
       {/* Descripción */}
-      <p className="text-gray-300 text-base mb-5">{description}</p>
+      <p className="text-gray-300 text-xl mb-5">{description}</p>
 
       {/* Etiquetas */}
       <div className="flex flex-wrap gap-2 mt-auto">
