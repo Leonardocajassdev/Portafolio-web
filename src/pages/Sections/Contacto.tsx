@@ -15,12 +15,12 @@ const Contacto: React.FC = () => {
       className="relative min-h-screen bg-black pt-20 pb-20 px-8 md:px-20 lg:px-40"
     >
       {/* Fondo azul difuminado centrado */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-full z-0"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-blue-500 opacity-20 blur-[120px] rounded-full z-0"></div>
 
       {/* Contenedor */}
-      <div className="max-w-7xl mx-auto p-4 relative z-10 text-left">
+      <div className="max-w-5xl mx-auto p-4 relative z-10 text-left">
         <h2
-          className="font-extrabold text-3xl mb-10 text-white"
+          className="font-extrabold text-xl mb-6 text-white"
           style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
         >
           Contacto
@@ -29,12 +29,12 @@ const Contacto: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Información de contacto */}
           <div className="text-white space-y-6">
-            <p className="text-xl mb-10">
+            <p className="text-sm mb-10">
               ¡Colaboremos! Siempre estoy abierto a conversar sobre proyectos
               interesantes y nuevas oportunidades.
             </p>
 
-            <div className="space-y-3">
+            <div className="space-y-3 text-xs">
               <p className="flex items-center gap-3">
                 <span>
                   <IconMailFilled size={20} color="#3B82F6" />
@@ -63,55 +63,56 @@ const Contacto: React.FC = () => {
                 href="https://www.linkedin.com/in/tu-perfil"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
+                className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
               >
-                <IconBrandLinkedin size={25} />
+                <IconBrandLinkedin size={20} />
               </a>
 
               <a
                 href="https://github.com/tu-usuario"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
+                className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
               >
-                <IconBrandGithub size={25} />
+                <IconBrandGithub size={20} />
               </a>
 
               <a
                 href="https://wa.me/573000000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
+                className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
               >
-                <IconBrandWhatsapp size={25} />
+                <IconBrandWhatsapp size={20} />
               </a>
             </div>
           </div>
 
-          {/* Formulario */}
-          <form className="space-y-6 bg-black/50 p-6 rounded-xl border border-blue-500/40 shadow-lg">
+          {/* Formulario más pequeño */}
+          <form className="space-y-4 bg-black/50 p-4 rounded-lg border border-blue-500/40 shadow-md max-w-md mx-auto">
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full p-3 bg-black border border-blue-500/40 rounded-lg text-white focus:outline-none focus:border-blue-400"
+              className="w-full p-2 text-xs bg-black border border-blue-500/40 rounded-md text-white focus:outline-none focus:border-blue-400"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full p-3 bg-black border border-blue-500/40 rounded-lg text-white focus:outline-none focus:border-blue-400"
+              className="w-full p-2 text-xs bg-black border border-blue-500/40 rounded-md text-white focus:outline-none focus:border-blue-400"
             />
             <textarea
               placeholder="Your Message"
-              rows={4}
-              className="w-full p-3 bg-black border border-blue-500/40 rounded-lg text-white focus:outline-none focus:border-blue-400"
+              rows={3}
+              className="w-full p-2 text-xs bg-black border border-blue-500/40 rounded-md text-white focus:outline-none focus:border-blue-400"
             ></textarea>
             <button
               type="submit"
-              className="w-full p-3 font-bold rounded-lg border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-black transition-all"
+              className="w-full p-2 text-xs font-semibold rounded-md border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-black transition-all"
             >
               ENVIAR MENSAJE
             </button>
           </form>
+
         </div>
       </div>
     </section>

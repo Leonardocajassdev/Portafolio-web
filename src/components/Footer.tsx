@@ -7,7 +7,7 @@ import {
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white mt-auto w-full">
-      <div className="max-w-5xl mx-auto px-15 py-3 flex items-center justify-between relative z-10">
+      <div className="max-w-5xl mx-auto px-16 py-3 flex items-center justify-between relative z-10">
         {/* Texto a la izquierda */}
         <p className="text-sm md:text-xs">Developed by Leonardo Cajas</p>
 
