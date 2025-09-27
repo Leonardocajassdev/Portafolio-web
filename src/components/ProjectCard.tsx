@@ -28,10 +28,10 @@ const CardProject: React.FC<CardProjectProps> = ({ image, title, description, ta
       </div>
 
       {/* Nombre */}
-      <h3 className="text-2xl font-bold mb-3 text-blue-400">{title}</h3>
+      <h3 className="text-base font-bold mb-3 text-blue-400">{title}</h3>
 
       {/* Descripción */}
-      <p className="text-gray-300 text-xl mb-5">{description}</p>
+      <p className="text-gray-300 text-sm mb-5">{description}</p>
 
       {/* Etiquetas */}
       <div className="flex flex-wrap gap-2 mt-auto">
@@ -40,7 +40,7 @@ const CardProject: React.FC<CardProjectProps> = ({ image, title, description, ta
             key={index}
             className="border border-white/30 rounded-full bg-white/5 backdrop-blur-sm 
                        hover:scale-105 hover:border-white 
-                       px-2 py-0.5 text-xm"
+                       px-2 py-0.5 text-[0.625rem]"
           >
             {tag}
           </span>

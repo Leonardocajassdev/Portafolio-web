@@ -5,18 +5,18 @@ export default function SobreMi() {
         className="relative min-h-screen bg-black pt-20 pb-20 px-8 md:px-20 lg:px-40"
       >
         {/* Fondo azul difuminado centrado */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-full z-0"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-blue-500 opacity-20 blur-[120px] rounded-full z-0"></div>
   
         {/* Contenedor centrado igual que otras secciones */}
-        <div className="max-w-7xl mx-auto p-4 relative z-10 text-left">
+        <div className="max-w-5xl mx-auto p-2 relative z-10 text-left">
           <h2
-            className="font-extrabold text-3xl mb-12 text-white"
+            className="font-extrabold text-xl mb-6 text-white"
             style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
           >
             Sobre mí
           </h2>
   
-          <p className="text-white mb-10 text-xl">
+          <p className="text-white mb-10 text-sm">
             Soy un Desarrollador Web Junior con gran entusiasmo por crear
             aplicaciones útiles y dinámicas. Manejo tecnologías como HTML, CSS,
             JavaScript y algunos frameworks modernos, lo que me permite construir
@@ -31,7 +31,7 @@ export default function SobreMi() {
             {/* Proyectos finalizados */}
             <div className="text-center">
               <h3
-                className="text-4xl font-bold text-blue-200"
+                className="text-2xl font-bold text-blue-200"
                 style={{
                   textShadow:
                     "0 0 8px rgba(0, 191, 255, 0.8), 0 0 16px rgba(0, 191, 255, 0.6)",
@@ -39,8 +39,8 @@ export default function SobreMi() {
               >
                 +4
               </h3>
-              <p className="text-lg">Proyectos finalizados</p>
-              <p className="text-xm opacity-70">
+              <p className="text-sm">Proyectos finalizados</p>
+              <p className="text-xs opacity-70">
                 Trabajando con pasión y dedicación
               </p>
             </div>

@@ -5,6 +5,7 @@ import CardProject from "../../components/ProjectCard";
 // importa tus imágenes
 import GestiAgroP from "../../assets/GestiAgroP.png";
 import CanculatorPy from "../../assets/CanculatorPy.png";
+import CRUDempleados from "../../assets/CRUDempleados.png";
 
 
 const Proyectos: React.FC = () => {
@@ -14,17 +15,17 @@ const Proyectos: React.FC = () => {
       className="relative min-h-screen bg-black pt-20 pb-20 px-8 md:px-20 lg:px-40"
     >
       {/* Fondo azul difuminado izquierda */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-r-full z-0"></div>
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[300px] bg-blue-500 opacity-20 blur-[120px] rounded-r-full z-0"></div>
 
       {/* Contenedor centrado igual que otras secciones */}
-      <div className="max-w-7xl mx-auto p-4 relative z-10">
+      <div className="max-w-5xl mx-auto p-4 relative z-10">
         <h2
-          className="font-extrabold text-3xl mb-12 text-white"
+          className="font-extrabold text-xl mb-6 text-white"
           style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
         >
           Mis proyectos
         </h2>
-        <p className="text-white mb-10 text-xl">
+        <p className="text-white mb-10 text-sm">
           Mis proyectos más importantes en mi trayectoria como desarrollador.
           Cada proyecto ha sido un reto y el resultado de mi dedicación y pasión
           por la programación. Cada uno de ellos me ha ayudado a adquirir nuevas
@@ -32,7 +33,7 @@ const Proyectos: React.FC = () => {
           inspírate con mis proyectos!
         </p>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-6">
+        <div className="grid md:grid-cols-3 xl:grid-cols-3 gap-8 mt-6">
           {/* Card GestiAgro (ocupa más ancho) */}
           <div className="lg:col-span-2 md:col-span-2">
             <CardProject
@@ -48,8 +49,15 @@ const Proyectos: React.FC = () => {
               tags={["Node.js","npm","React","JavaScript","TailwindCSS", "Python","PostgreSQL","Git","GitHub","..."]}
             />
           </div>
-
-          {/* Otras Cards normales */}
+          <CardProject
+            image={CRUDempleados}
+            title="CRUD Empleados"
+            description="Aplicación web que permite gestionar empleados mediante un
+            CRUD (crear, leer, actualizar y eliminar). Incluye búsqueda por ID,
+            inicio de sesión y conexión a base de datos en phpMyAdmin (MySQL).
+            El diseño es responsivo con Bootstrap."
+            tags={["PHP", "Bootstrap"]}
+          />
           <CardProject
             image={CanculatorPy}
             title="Calculadora Python"
@@ -59,12 +67,7 @@ const Proyectos: React.FC = () => {
             una interfaz gráfica adaptable con estilos personalizados."
             tags={["Python"]}
           />
-          <CardProject
-            image={CanculatorPy}
-            title="CRUD Empleados"
-            description="Segundo proyecto de ejemplo con las mismas características."
-            tags={["Node.js", "Express", "MongoDB"]}
-          />
+          
         </div>
 
       </div>

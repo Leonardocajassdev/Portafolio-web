@@ -21,13 +21,12 @@ const Navbar: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // ejecuta una vez al cargar
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Estilos neon
   const neonStyle = {
-    textShadow: "0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff",
+    textShadow: "0 0 3px #fff, 0 0 6px #fff, 0 0 8px #fff",
     color: "#fff",
   };
 
@@ -39,23 +38,23 @@ const Navbar: React.FC = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto p-4 flex items-center justify-between relative z-10">
+      <div className="max-w-5xl mx-auto px-15 py-3 flex items-center justify-between relative z-10">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <h1
-            className="font-extrabold text-4xl text-white"
-            style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
+            className="font-extrabold text-2xl text-white"
+            style={{ textShadow: "0 0 3px rgba(255, 255, 255, 0.6)" }}
           >
             Codev
           </h1>
         </div>
 
         {/* Links */}
-        <ul className="flex gap-8 font-medium">
+        <ul className="flex gap-5 font-medium">
           <li>
             <a
               href="#inicio"
-              className="text-lg transition"
+              className="text-xs transition"
               style={activeSection === "inicio" ? neonStyle : { color: "#fff" }}
             >
               Inicio
@@ -64,16 +63,16 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="#sobremi"
-              className="text-lg transition"
+              className="text-xs transition"
               style={activeSection === "sobremi" ? neonStyle : { color: "#fff" }}
             >
-              Sobre mi
+              Sobre mí
             </a>
           </li>
           <li>
             <a
               href="#projects"
-              className="text-lg transition"
+              className="text-xs transition"
               style={activeSection === "projects" ? neonStyle : { color: "#fff" }}
             >
               Mis proyectos
@@ -82,7 +81,7 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="#skills"
-              className="text-lg transition"
+              className="text-xs transition"
               style={activeSection === "skills" ? neonStyle : { color: "#fff" }}
             >
               Skills
@@ -91,7 +90,7 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="#contacto"
-              className="text-lg transition"
+              className="text-xs transition"
               style={activeSection === "contacto" ? neonStyle : { color: "#fff" }}
             >
               Contacto
