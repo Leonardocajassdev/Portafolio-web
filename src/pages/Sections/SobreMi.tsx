@@ -17,13 +17,8 @@ export default function SobreMi() {
           </h2>
   
           <p className="text-white mb-10 text-sm">
-            Soy un Desarrollador Web Junior con gran entusiasmo por crear
-            aplicaciones útiles y dinámicas. Manejo tecnologías como HTML, CSS,
-            JavaScript y algunos frameworks modernos, lo que me permite construir
-            soluciones prácticas y de calidad. Considero que la tecnología debe
-            facilitar la vida de las personas y generar un impacto positivo. Cada
-            proyecto que desarrollo es una ocasión para mejorar mis habilidades,
-            asumir nuevos retos y aportar valor al mundo digital.
+          Desarrollador Full Stack enfocado en el desarrollo web moderno, con experiencia en la creación de interfaces dinámicas e intuitivas utilizando React.js y Node.js. Cuento con conocimientos en Python, bases de datos relacionales y análisis de datos.
+          He trabajado en equipos de desarrollo ágiles (Scrum), participando en proyectos de gran escala y aplicando buenas prácticas de diseño, control de versiones y optimización de rendimiento. Destaco por mi atención al detalle, compromiso con la calidad del código y capacidad para transformar ideas en soluciones funcionales y atractivas.
           </p>
   
           {/* Métricas estilo "About Me" */}
@@ -37,7 +32,7 @@ export default function SobreMi() {
                     "0 0 8px rgba(0, 191, 255, 0.8), 0 0 16px rgba(0, 191, 255, 0.6)",
                 }}
               >
-                +4
+                +3
               </h3>
               <p className="text-sm">Proyectos finalizados</p>
               <p className="text-xs opacity-70">

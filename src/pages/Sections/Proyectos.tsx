@@ -35,7 +35,7 @@ const Proyectos: React.FC = () => {
 
         <div className="grid md:grid-cols-3 xl:grid-cols-3 gap-8 mt-6">
           {/* Card GestiAgro (ocupa más ancho) */}
-          <div className="lg:col-span-2 md:col-span-2">
+          <div className="lg:col-span-1 md:col-span-2">
             <CardProject
               image={GestiAgroP}
               title="GestiAgro"

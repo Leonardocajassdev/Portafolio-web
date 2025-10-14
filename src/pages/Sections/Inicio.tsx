@@ -1,4 +1,5 @@
 import { IconBrandLinkedin, IconBrandGithub, IconDownload } from "@tabler/icons-react";
+import Leonardo from "../../assets/Leonardo.jpeg";
 
 export default function Inicio() {
   return (
@@ -15,9 +16,9 @@ export default function Inicio() {
         {/* Imagen */}
         <div className="flex-shrink-0">
           <img
-            src="/assets/profile.jpg"
+            src={Leonardo}
             alt="Leonardo"
-            className="w-50 h-50 rounded-full border-4 border-blue-500"
+            className="w-50 h-50 rounded-full border-2 border-blue-900"
           />
         </div>
 
