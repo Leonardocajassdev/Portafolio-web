@@ -2,10 +2,7 @@ import React from "react";
 import { 
   IconMailFilled, 
   IconPhoneFilled, 
-  IconMapPinFilled, 
-  IconBrandLinkedin, 
-  IconBrandGithub, 
-  IconBrandWhatsapp 
+  IconMapPinFilled
 } from "@tabler/icons-react";
 
 const Contacto: React.FC = () => {
@@ -39,52 +36,22 @@ const Contacto: React.FC = () => {
                 <span>
                   <IconMailFilled size={20} color="#3B82F6" />
                 </span>
-                leonardo@example.com
+                Cajasleonardosilva@gmail.com
               </p>
 
               <p className="flex items-center gap-3">
                 <span>
                   <IconPhoneFilled size={20} color="#22C55E" />
                 </span>
-                +57 300-000-0000
+                +57 3214641038
               </p>
 
               <p className="flex items-center gap-3">
                 <span>
                   <IconMapPinFilled size={20} color="#EF4444" />
                 </span>
-                Colombia
+                Pitalito-Huila
               </p>
-            </div>
-
-            {/* Íconos sociales */}
-            <div className="flex gap-6 mt-6">
-              <a
-                href="https://www.linkedin.com/in/tu-perfil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
-              >
-                <IconBrandLinkedin size={20} />
-              </a>
-
-              <a
-                href="https://github.com/tu-usuario"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
-              >
-                <IconBrandGithub size={20} />
-              </a>
-
-              <a
-                href="https://wa.me/573000000000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
-              >
-                <IconBrandWhatsapp size={20} />
-              </a>
             </div>
           </div>
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
-  IconBrandInstagram,
-  IconBrandDiscord
+  IconBrandWhatsapp
 } from "@tabler/icons-react";
 
 const Footer: React.FC = () => {
@@ -13,11 +12,8 @@ const Footer: React.FC = () => {
 
         {/* Iconos a la derecha */}
         <div className="flex gap-5">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors">
-            <IconBrandInstagram size={25} />
-          </a>
-          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
-            <IconBrandDiscord size={25} />
+          <a href="https://wa.me/573214641038/?text=urlencodedtext" target="_blank" rel="noopener noreferrer" className="hover:text-green-500 transition-colors">
+            <IconBrandWhatsapp size={25} />
           </a>
         </div>
       </div>

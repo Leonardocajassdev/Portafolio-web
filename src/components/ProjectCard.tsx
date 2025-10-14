@@ -1,29 +1,47 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa"; // 👈 Ícono de GitHub
 
 interface CardProjectProps {
   image: string;
   title: string;
-  description: string;
+  description: React.ReactNode; // 👈 ahora acepta texto o JSX
   tags: string[];
-  label?: string; // 👈 Texto de la etiqueta (ejemplo: Frontend, Backend, Fullstack)
+  label?: string;
+  repoLink?: string;
 }
 
-const CardProject: React.FC<CardProjectProps> = ({ image, title, description, tags, label }) => {
+const CardProject: React.FC<CardProjectProps> = ({
+  image,
+  title,
+  description,
+  tags,
+  label,
+  repoLink,
+}) => {
   return (
     <div className="bg-gray-900 rounded-2xl p-6 flex flex-col hover:scale-103 transition-transform">
-      {/* Imagen con etiqueta */}
+      {/* Imagen con etiqueta e ícono GitHub */}
       <div className="relative mb-4">
-      <img
-        src={image}
-        alt={title}
-        className="rounded-xl w-full"
-      />
+        <img src={image} alt={title} className="rounded-xl w-full" />
 
-
+        {/* Etiqueta */}
         {label && (
           <span className="absolute top-0 left-0 bg-purple-600 text-white text-sm font-semibold px-3 py-1 rounded-br-xl">
             {label}
           </span>
+        )}
+
+        {/* Ícono de GitHub */}
+        {repoLink && (
+          <a
+            href={repoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-2 right-2 bg-black/60 p-2 rounded-full hover:bg-black hover:scale-110 transition"
+            title="Ver repositorio en GitHub"
+          >
+            <FaGithub className="text-white text-lg" />
+          </a>
         )}
       </div>
 
@@ -51,5 +69,3 @@ const CardProject: React.FC<CardProjectProps> = ({ image, title, description, ta
 };
 
 export default CardProject;
-
-

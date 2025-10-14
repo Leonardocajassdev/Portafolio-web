@@ -18,7 +18,7 @@ export default function Inicio() {
           <img
             src={Leonardo}
             alt="Leonardo"
-            className="w-50 h-50 rounded-full border-2 border-blue-900"
+            className="w-50 h-50 rounded-full border-2 border-gray-900"
           />
         </div>
 
@@ -32,17 +32,15 @@ export default function Inicio() {
           </p>
 
           <p className="text-gray-200 mb-5">
-            Gracias a mi experiencia como{" "}
-            <span className="text-gray-100 font-semibold">full-stack</span>, he
-            desarrollado muchas habilidades que me han permitido crear soluciones a
-            casos reales, basadas en las necesidades de los usuarios mediante diversas
-            tecnologías.
+            Apasionado por crear soluciones digitales innovadoras. 
+            Con experiencia en desarrollo y diseño web, me enfoco en construir 
+            aplicaciones funcionales, atractivas y centradas en el usuario.
           </p>
 
           {/* Botones estilo pro */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <a
-              href="https://www.linkedin.com/in/tu-perfil"
+              href="https://www.linkedin.com/in/leonardo-cajas/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-0 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
@@ -51,7 +49,7 @@ export default function Inicio() {
             </a>
 
             <a
-              href="https://github.com/tu-usuario"
+              href="https://github.com/Leonardocajassdev"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
@@ -60,13 +58,14 @@ export default function Inicio() {
             </a>
 
             <a
-              href="/assets/CV-Leonardo.pdf"
+              href="/CV-Leonardo-Cajas.pdf"
               download
-              className="flex items-center gap-2 px-3 py-0  text-xs border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
+              className="flex items-center gap-2 px-3 py-0 text-xs border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
             >
               <IconDownload size={20} />
               Descargar CV
             </a>
+
           </div>
         </div>
       </div>
