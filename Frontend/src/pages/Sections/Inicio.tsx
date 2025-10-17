@@ -52,7 +52,7 @@ export default function Inicio() {
 
           <p className="text-gray-200 mb-5">
             Apasionado por crear soluciones digitales innovadoras. 
-            Con experiencia en desarrollo y diseño web, me enfoco en construir 
+            Con experiencia en desarrollo y diseño web construyendo
             aplicaciones funcionales, atractivas y centradas en el usuario.
           </p>
 
