@@ -18,11 +18,14 @@ const Contacto: React.FC = () => {
     setStatus("Enviando...");
 
     try {
-      const response = await fetch("http://localhost:4000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://portafolio-web-xbhp.onrender.com/api/contact", // <-- URL de tu backend en Render
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
 
@@ -77,7 +80,7 @@ const Contacto: React.FC = () => {
             </div>
           </div>
 
-          {/* Formulario conectado al backend*/}
+          {/* Formulario conectado al backend */}
           <form
             onSubmit={handleSubmit}
             className="space-y-4 bg-black/50 p-4 rounded-lg border border-blue-500/40 shadow-md max-w-md mx-auto"
@@ -126,3 +129,4 @@ const Contacto: React.FC = () => {
 };
 
 export default Contacto;
+

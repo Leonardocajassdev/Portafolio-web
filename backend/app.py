@@ -3,13 +3,16 @@ from flask_cors import CORS
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import os
 
 app = Flask(__name__)
-CORS(app)  # permite peticiones desde React
 
-# 📧 Configuración
+# ✅ Configura CORS solo para tu frontend
+CORS(app, origins=["https://portafolio-web-nu-topaz.vercel.app"])
+
+# 📧 Configuración del correo
 EMAIL_SENDER = "cajasleonardosilva@gmail.com"
-EMAIL_PASSWORD = "pavh cwaj qhhf amha"  # generada en Google
+EMAIL_PASSWORD = "pavh cwaj qhhf amha"  # Generada en Google
 EMAIL_RECEIVER = "cajasleonardosilva@gmail.com"
 
 @app.route("/api/contact", methods=["POST"])
@@ -23,6 +26,7 @@ def contact():
         return jsonify({"error": "Todos los campos son obligatorios"}), 400
 
     try:
+        # Crear mensaje
         msg = MIMEMultipart()
         msg["From"] = EMAIL_SENDER
         msg["To"] = EMAIL_RECEIVER
@@ -31,16 +35,19 @@ def contact():
         body = f"Nombre: {name}\nCorreo: {email}\n\nMensaje:\n{message}"
         msg.attach(MIMEText(body, "plain"))
 
+        # Enviar correo
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(EMAIL_SENDER, EMAIL_PASSWORD)
             server.send_message(msg)
 
         return jsonify({"success": "Mensaje enviado correctamente"}), 200
+
     except Exception as e:
         print("Error:", e)
         return jsonify({"error": "No se pudo enviar el mensaje"}), 500
 
-
+# 🔹 Para Render, no uses debug ni host específico
 if __name__ == "__main__":
-    app.run(debug=True, port=4000)
+    port = int(os.environ.get("PORT", 4000))
+    app.run(host="0.0.0.0", port=port)
