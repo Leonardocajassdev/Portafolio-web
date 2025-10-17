@@ -1,7 +1,26 @@
+import { useState, useRef, useEffect } from "react";
 import { IconBrandLinkedin, IconBrandGithub, IconDownload } from "@tabler/icons-react";
 import Leonardo from "../../assets/Leonardo.jpeg";
 
 export default function Inicio() {
+  const [githubMenuOpen, setGithubMenuOpen] = useState(false);
+  const githubRef = useRef<HTMLDivElement | null>(null);
+
+  // Cerrar menú al hacer click fuera
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      if (githubRef.current && !githubRef.current.contains(target)) {
+        setGithubMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <section
       id="inicio"
@@ -37,30 +56,52 @@ export default function Inicio() {
             aplicaciones funcionales, atractivas y centradas en el usuario.
           </p>
 
-          {/* Botones estilo pro */}
+          {/* Botones */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+            
+            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/leonardo-cajas/"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-0 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
             >
               <IconBrandLinkedin size={20} />
             </a>
 
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                window.open("https://github.com/Leonardocajassdev", "_blank");
-                window.open("https://github.com/lfcajass", "_blank");
-              }}
-              className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
-            >
-              <IconBrandGithub size={20} />
-              <span>+2</span>
-            </a>
+            {/* GitHub con menú desplegable */}
+            <div className="relative" ref={githubRef}>
+              <button
+                onClick={() => setGithubMenuOpen(!githubMenuOpen)}
+                className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
+              >
+                <IconBrandGithub size={20} />
+                <span>+2</span>
+              </button>
 
+              {githubMenuOpen && (
+                <div className="absolute mt-2 w-40 bg-white/10 backdrop-blur-sm rounded-md shadow-lg border border-white/30 z-10">
+                  <a
+                    href="https://github.com/Leonardocajassdev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm hover:bg-white/20 rounded-t-md"
+                  >
+                    Leonardocajassdev
+                  </a>
+                  <a
+                    href="https://github.com/lfcajass"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm hover:bg-white/20 rounded-b-md"
+                  >
+                    lfcajass
+                  </a>
+                </div>
+              )}
+            </div>
 
+            {/* Descargar CV */}
             <a
               href="/CV-Leonardo-Cajas.pdf"
               download
