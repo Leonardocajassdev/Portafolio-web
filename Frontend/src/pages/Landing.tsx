@@ -9,7 +9,6 @@ import Contacto from "./Sections/Contacto";
 const Landing: React.FC = () => {
   return (
     <Layout>
-      {/* Aquí ya no repites Navbar ni Footer */}
       <Inicio/>
       <SobreMi />
       <Proyectos />

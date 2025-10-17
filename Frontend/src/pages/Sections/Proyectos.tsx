@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CardProject from "../../components/ProjectCard";
 
-// Importa tus imágenes
+// Importar imágenes
 import GestiAgroP from "../../assets/GestiAgroP.png";
 import CanculatorPy from "../../assets/CanculatorPy.png";
 import CRUDempleados from "../../assets/CRUDempleados.png";

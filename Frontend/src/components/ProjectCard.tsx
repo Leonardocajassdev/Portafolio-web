@@ -1,10 +1,10 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa"; // 👈 Ícono de GitHub
+import { FaGithub } from "react-icons/fa"; 
 
 interface CardProjectProps {
   image: string;
   title: string;
-  description: React.ReactNode; // 👈 ahora acepta texto o JSX
+  description: React.ReactNode;
   tags: string[];
   label?: string;
   repoLink?: string;

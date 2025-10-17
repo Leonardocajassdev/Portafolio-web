@@ -21,7 +21,7 @@
     border-right: 2px solid rgb(143, 233, 233); /* cursor */
     width: 0;
   
-    /* Texto con neón más oscuro y menos difuminado */
+    /* Texto con neón */
     color: #caf7f6; 
     text-shadow: 
       0 0 1px #5affff,
@@ -33,22 +33,22 @@
   }
   
 
-  /* ==== Corregir color del autocompletado en los inputs ==== */
+  /* ==== color del autocompletado en los inputs ==== */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset !important; /* Fondo negro */
-  -webkit-text-fill-color: #ffffff !important; /* Texto blanco */
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset !important; /* Fondo  */
+  -webkit-text-fill-color: #ffffff !important; /* Texto  */
   caret-color: #ffffff !important; /* Color del cursor */
   transition: background-color 9999s ease-in-out 0s !important;
 }
 
-/* Opcional: color más elegante para el placeholder */
+/* color  para el placeholder */
 ::placeholder {
-  color: #9ca3af; /* Gris claro (similar a text-gray-400 de Tailwind) */
+  color: #9ca3af; 
   opacity: 1; /* Asegura que se vea igual en todos los navegadores */
 }
 
