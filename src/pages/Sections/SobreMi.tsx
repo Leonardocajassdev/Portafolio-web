@@ -8,7 +8,7 @@ export default function SobreMi() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-blue-500 opacity-20 blur-[120px] rounded-full z-0"></div>
   
         {/* Contenedor centrado igual que otras secciones */}
-        <div className="max-w-5xl mx-auto p-4 relative z-10 text-left">
+        <div className="max-w-5xl mx-auto p-4 relative z-10">
           <h2
             className="font-extrabold text-xl mb-6 text-white"
             style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}

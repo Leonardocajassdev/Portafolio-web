@@ -67,7 +67,7 @@ import {
           </h2>
           <p className="text-white text-sm mb-7">
             Te presento mis habilidades en diversas tecnologías que utilizo en mi desarrollo profesional. 
-            Estoy emocionado de seguir aprendiendo cada vez más, tanto de estas como de nuevas herramientas que surjan en el mundo del desarrollo web.
+            Estoy emocionado de seguir aprendiendo cada vez más, tanto de estas como de nuevas herramientas que surjan en el mundo del desarrollo de Software.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 ">
