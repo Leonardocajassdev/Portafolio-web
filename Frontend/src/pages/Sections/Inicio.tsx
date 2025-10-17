@@ -42,20 +42,24 @@ export default function Inicio() {
             <a
               href="https://www.linkedin.com/in/leonardo-cajas/"
               target="_blank"
-              rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-0 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
             >
               <IconBrandLinkedin size={20} />
             </a>
 
             <a
-              href="https://github.com/Leonardocajassdev"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open("https://github.com/Leonardocajassdev", "_blank");
+                window.open("https://github.com/lfcajass", "_blank");
+              }}
               className="flex items-center gap-2 px-3 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"
             >
               <IconBrandGithub size={20} />
+              <span>+2</span>
             </a>
+
 
             <a
               href="/CV-Leonardo-Cajas.pdf"
