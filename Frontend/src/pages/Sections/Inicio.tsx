@@ -82,14 +82,6 @@ export default function Inicio() {
               {githubMenuOpen && (
                 <div className="absolute mt-2 w-40 bg-white/10 backdrop-blur-sm rounded-md shadow-lg border border-white/30 z-10">
                   <a
-                    href="https://github.com/Leonardocajassdev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm hover:bg-white/20 rounded-t-md"
-                  >
-                    Leonardocajassdev
-                  </a>
-                  <a
                     href="https://github.com/lfcajass"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -97,6 +89,15 @@ export default function Inicio() {
                   >
                     lfcajass
                   </a>
+                  <a
+                    href="https://github.com/Leonardocajassdev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm hover:bg-white/20 rounded-t-md"
+                  >
+                    Leonardocajassdev
+                  </a>
+                  
                 </div>
               )}
             </div>
