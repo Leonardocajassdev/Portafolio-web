@@ -19,7 +19,7 @@ const Contacto: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://portafolio-web-xbhp.onrender.com", // <-- URL de tu backend en Render
+        "https://portafolio-web-xbhp.onrender.com/api/contact", // ✅ RUTA COMPLETA CON /api/contact
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -37,6 +37,7 @@ const Contacto: React.FC = () => {
       }
     } catch (error) {
       setStatus("❌ No se pudo conectar con el servidor");
+      console.error("Error de conexión:", error);
     }
   };
 
@@ -129,4 +130,3 @@ const Contacto: React.FC = () => {
 };
 
 export default Contacto;
-
