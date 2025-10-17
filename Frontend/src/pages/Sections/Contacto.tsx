@@ -19,7 +19,7 @@ const Contacto: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://portafolio-web-xbhp.onrender.com/api/contact", // <-- URL de tu backend en Render
+        "https://portafolio-web-xbhp.onrender.com", // <-- URL de tu backend en Render
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
