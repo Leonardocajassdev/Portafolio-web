@@ -4,15 +4,16 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
+import traceback  # ✅ Para mostrar errores detallados
 
 app = Flask(__name__)
 
-# ✅ Configuración CORS mejorada
+# ✅ Configuración CORS
 CORS(app, resources={
     r"/api/*": {
         "origins": [
-            "https://portafolio-web-nu-topaz.vercel.app",
-            "http://localhost:3000"  # Para desarrollo local
+            "https://portafolio-web-nu-topaz.vercel.app",  # Producción (Vercel)
+            "http://localhost:3000"  # Desarrollo local
         ],
         "methods": ["POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
@@ -21,25 +22,27 @@ CORS(app, resources={
 
 # 📧 Configuración del correo
 EMAIL_SENDER = "cajasleonardosilva@gmail.com"
-EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "pavh cwaj qhhf amha")
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "pavhcwajqhhfamha")  # ⚠️ asegúrate que está bien en Render
 EMAIL_RECEIVER = "cajasleonardosilva@gmail.com"
 
-# Ruta de prueba
+# 🧠 Ruta de prueba
 @app.route("/", methods=["GET"])
 def home():
     return jsonify({"message": "Backend funcionando ✅"}), 200
 
+
+# 📩 Ruta para contacto
 @app.route("/api/contact", methods=["POST", "OPTIONS"])
 def contact():
-    # Manejo de preflight request
+    # Manejo de preflight (CORS)
     if request.method == "OPTIONS":
         return "", 204
-    
+
+    # Obtener datos del JSON
     data = request.get_json()
-    
     if not data:
         return jsonify({"error": "No se recibieron datos"}), 400
-    
+
     name = data.get("name")
     email = data.get("email")
     message = data.get("message")
@@ -48,7 +51,7 @@ def contact():
         return jsonify({"error": "Todos los campos son obligatorios"}), 400
 
     try:
-        # Crear mensaje
+        # Crear el mensaje del correo
         msg = MIMEMultipart()
         msg["From"] = EMAIL_SENDER
         msg["To"] = EMAIL_RECEIVER
@@ -57,17 +60,20 @@ def contact():
         body = f"Nombre: {name}\nCorreo: {email}\n\nMensaje:\n{message}"
         msg.attach(MIMEText(body, "plain"))
 
-        # Enviar correo
+        # Conexión y envío
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(EMAIL_SENDER, EMAIL_PASSWORD)
             server.send_message(msg)
 
+        print("✅ Correo enviado correctamente")
         return jsonify({"success": "Mensaje enviado correctamente"}), 200
 
     except Exception as e:
-        print(f"❌ Error al enviar correo: {e}")
-        return jsonify({"error": "No se pudo enviar el mensaje"}), 500
+        print("❌ Error al enviar correo:", e)
+        print(traceback.format_exc())  # 🔍 Muestra detalle completo del error en los logs de Render
+        return jsonify({"error": f"No se pudo enviar el mensaje: {str(e)}"}), 500
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 4000))
