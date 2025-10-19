@@ -9,6 +9,12 @@ const Contacto: React.FC = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
 
+  // Detecta entorno (local o producción)
+  const isLocal = window.location.hostname === "localhost";
+  const formAction = isLocal
+    ? "http://localhost:4000/api/contact" // Flask local
+    : "https://formspree.io/f/xqayjbbz"; // Formspree producción
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -18,26 +24,21 @@ const Contacto: React.FC = () => {
     setStatus("Enviando...");
 
     try {
-      const response = await fetch(
-        "https://portafolio-web-xbhp.onrender.com/api/contact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      const result = await response.json();
+      const response = await fetch(formAction, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
         setStatus("✅ Mensaje enviado correctamente");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus(`❌ Error: ${result.error}`);
+        setStatus("❌ Error al enviar el mensaje");
       }
     } catch (error) {
+      console.error(error);
       setStatus("❌ No se pudo conectar con el servidor");
-      console.error("Error de conexión:", error);
     }
   };
 
@@ -81,7 +82,7 @@ const Contacto: React.FC = () => {
             </div>
           </div>
 
-          {/* Formulario conectado al backend */}
+          {/* Formulario funcional local + producción */}
           <form
             onSubmit={handleSubmit}
             className="space-y-4 bg-black/50 p-4 rounded-lg border border-blue-500/40 shadow-md max-w-md mx-auto"
