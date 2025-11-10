@@ -48,19 +48,21 @@ export default function Inicio() {
           <p className="typewriter text-xl font-bold text-blue-100 mb-5">
             Software Developer <span className="text-gray-200">&lt;/&gt;</span>
           </p>
+          
 
           <p className="text-gray-200 mb-5">
-            Apasionado por crear soluciones digitales innovadoras. 
-            Con experiencia en desarrollo y diseño web construyendo
-            aplicaciones funcionales, atractivas y centradas en el usuario.
+          Apasionado por crear soluciones digitales innovadoras.
+          Con experiencia en desarrollo, diseño web y backend, construyendo aplicaciones funcionales, atractivas y centradas en el usuario.
           </p>
+
+
 
           {/* Botones */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/leonardo-cajas/"
+              href="https://www.linkedin.com/in/leonardo-cajas"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-0 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-white transition-all duration-300"

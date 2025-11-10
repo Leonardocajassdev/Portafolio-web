@@ -15,10 +15,19 @@ export default function SobreMi() {
               Sobre mí
             </h2>
     
-            <p className="text-white mb-10 text-sm">
-            Desarrollador Full Stack enfocado en el desarrollo web moderno, con experiencia en la creación de interfaces dinámicas e intuitivas utilizando React.js y Node.js. Cuento con conocimientos en Python, bases de datos relacionales y análisis de datos.
-            He trabajado en equipos de desarrollo ágiles (Scrum), participando en proyectos de gran escala y aplicando buenas prácticas de diseño, control de versiones y optimización de rendimiento. Destaco por mi atención al detalle, compromiso con la calidad del código y capacidad para transformar ideas en soluciones funcionales y atractivas.
+            <p className="text-white mb-3 text-sm">
+            Desarrollador Full Stack con experiencia en el desarrollo de aplicaciones web modernas, combinando tecnologías frontend y backend para crear soluciones escalables, seguras y de alto rendimiento. Domino React.js, Node.js y Django REST Framework, además de contar con sólidos conocimientos en Python, JavaScript/TypeScript, HTML5, CSS3 y bases de datos relacionales y no relacionales como PostgreSQL y MongoDB.
             </p>
+
+            <p className="text-white mb-3 text-sm">
+            He participado en equipos ágiles bajo la metodología Scrum, contribuyendo al diseño, desarrollo e implementación de proyectos de diversa complejidad. Aplico buenas prácticas de arquitectura, control de versiones (Git/GitHub) y optimización del rendimiento tanto en el cliente como en el servidor.
+            </p>
+
+            <p className="text-white mb-3 text-sm">
+            Me apasiona la ciberseguridad y deseo continuar formándome en esta área, orientando mi carrera hacia el desarrollo de software seguro y la protección de sistemas y datos.
+            </p>
+
+
 
             <div className="flex flex-col justify-center sm:flex-row gap-10 text-white mt-10">
               {/* Proyectos finalizados */}
