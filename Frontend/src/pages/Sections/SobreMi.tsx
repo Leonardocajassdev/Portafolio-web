@@ -39,7 +39,7 @@ export default function SobreMi() {
                       "0 0 8px rgba(0, 191, 255, 0.8), 0 0 16px rgba(0, 191, 255, 0.6)",
                   }}
                 >
-                  +3
+                  3+
                 </h3>
                 <p className="text-sm">Proyectos finalizados</p>
                 <p className="text-xs opacity-70">
