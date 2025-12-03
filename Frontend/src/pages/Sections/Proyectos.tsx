@@ -7,7 +7,6 @@ import CanculatorPy from "../../assets/CanculatorPy.png";
 import CRUDempleados from "../../assets/CRUDempleados.png";
 
 const Proyectos: React.FC = () => {
-  // Estado para controlar si se muestra la descripción completa
   const [showMore, setShowMore] = useState(false);
 
   const shortDescription =
@@ -23,7 +22,7 @@ const Proyectos: React.FC = () => {
       {/* Fondo azul difuminado izquierda */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[400px] h-[200px] bg-blue-500 opacity-20 blur-[120px] rounded-r-full z-0"></div>
 
-      {/* Contenedor principal */}
+      {/* Contenedor principal (Mismo max-w-5xl original) */}
       <div className="max-w-5xl mx-auto p-4 relative z-10">
         <h2
           className="font-extrabold text-xl mb-6 text-white"
@@ -40,41 +39,30 @@ const Proyectos: React.FC = () => {
           inspírate con mis proyectos!
         </p>
 
-        {/* Grid de proyectos */}
-        <div className="grid md:grid-cols-3 xl:grid-cols-3 gap-8 mt-6">
-          {/* Card GestiAgro (ocupa más ancho) */}
-          <div className="lg:col-span-1 md:col-span-2">
-            <CardProject
-              image={GestiAgroP}
-              title="GestiAgro"
-              description={
-                <>
-                  {showMore ? fullDescription : shortDescription}
-                  <button
-                    onClick={() => setShowMore(!showMore)}
-                    className="text-blue-400 ml-2 hover:underline"
-                  >
-                    {showMore ? "Ver menos" : "Ver más"}
-                  </button>
-                </>
-              }
-              tags={[
-                "Node.js",
-                "npm",
-                "React",
-                "JavaScript",
-                "TailwindCSS",
-                "Python",
-                "PostgreSQL",
-                "Git",
-                "GitHub",
-                "...",
-              ]}
-              repoLink="https://github.com/Jefer526/GestiAgro"
-            />
-          </div>
+        {/* LISTA VERTICAL (flex-col) en lugar de Grid */}
+        <div className="flex flex-col gap-6 mt-6">
+          <CardProject
+            image={GestiAgroP}
+            title="GestiAgro"
+            description={
+              <>
+                {showMore ? fullDescription : shortDescription}
+                <button
+                  onClick={() => setShowMore(!showMore)}
+                  className="text-blue-400 ml-2 hover:underline"
+                >
+                  {showMore ? "Ver menos" : "Ver más"}
+                </button>
+              </>
+            }
+            tags={[
+              "Node.js", "npm", "React", "JavaScript", "TailwindCSS",
+              "Python", "PostgreSQL", "Git", "GitHub", "...",
+            ]}
+            repoLink="https://github.com/Jefer526/GestiAgro"
+            label="Destacado"
+          />
 
-          {/* Card CRUD Empleados */}
           <CardProject
             image={CRUDempleados}
             title="CRUD Empleados"
@@ -83,7 +71,6 @@ const Proyectos: React.FC = () => {
             repoLink="https://github.com/Leonardocajassdev/CRUD-empleados"
           />
 
-          {/* Card Calculadora Python */}
           <CardProject
             image={CanculatorPy}
             title="Calculadora Python"

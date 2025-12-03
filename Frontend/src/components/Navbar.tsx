@@ -38,8 +38,8 @@ const Navbar: React.FC = () => {
     { id: "inicio", text: "Inicio" },
     { id: "sobremi", text: "Sobre mí" },
     { id: "projects", text: "Mis proyectos" },
-    { id: "certificados", text: "Certificaciones" },
     { id: "skills", text: "Skills" },
+    { id: "certificados", text: "Certificaciones" },
     { id: "contacto", text: "Contacto" },
   ];
 
