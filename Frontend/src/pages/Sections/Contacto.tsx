@@ -39,7 +39,7 @@ const Contacto: React.FC = () => {
             <div className="space-y-3 text-xs">
               <p className="flex items-center gap-3">
                 <IconMailFilled size={20} color="#3B82F6" />
-                Cajasleonardosilva@gmail.com
+                cajasleonardosilva@gmail.com
               </p>
               <p className="flex items-center gap-3">
                 <IconPhoneFilled size={20} color="#22C55E" />
