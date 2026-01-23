@@ -1,12 +1,12 @@
 import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa"; // Cambiamos el icono a uno de enlace externo
+import { FaExternalLinkAlt } from "react-icons/fa"; 
 
 interface CertCardProps {
-  image: string;          // Logo de la certificación o imagen del diploma
-  title: string;          // Nombre de la certificación (ej. AWS Cloud Practitioner)
-  issuer: string;         // Emisor (ej. Amazon Web Services, Udemy)
-  tags: string[];         // Habilidades (ej. Cloud, Security)
-  credentialLink?: string;// Link a la credencial (Credly, PDF, etc.)
+  image: string;          
+  title: string;          
+  issuer: string;         
+  tags: string[];         
+  credentialLink?: string;
 
 }
 

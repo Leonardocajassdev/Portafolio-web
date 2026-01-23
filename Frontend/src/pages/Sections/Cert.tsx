@@ -1,7 +1,7 @@
 import CertCard from "../../components/CertCard";
 
 // Importar archivo
-import BadgeCiberseguridad from "../../assets/BadgeCiberseguridad.png";
+import BadgeCiberseguridad from "../../assets/BadgeCiberseguridad.webp";
 
 const Cert: React.FC = () => {
 

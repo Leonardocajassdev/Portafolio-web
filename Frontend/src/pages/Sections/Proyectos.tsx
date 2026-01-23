@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import CardProject from "../../components/ProjectCard";
 
 // Importar imágenes
-import GestiAgroP from "../../assets/GestiAgroP.png";
-import CanculatorPy from "../../assets/CanculatorPy.png";
-import CRUDempleados from "../../assets/CRUDempleados.png";
+import GestiAgroP from "../../assets/GestiAgroP.webp";
+import CanculatorPy from "../../assets/CanculatorPy.webp";
+import CRUDempleados from "../../assets/CRUDempleados.webp";
 
 const Proyectos: React.FC = () => {
   const [showMore, setShowMore] = useState(false);

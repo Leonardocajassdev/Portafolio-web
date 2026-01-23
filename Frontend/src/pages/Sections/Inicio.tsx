@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { IconBrandLinkedin, IconBrandGithub, IconDownload } from "@tabler/icons-react";
-import Leonardo from "../../assets/Leonardo.jpeg";
+import Leonardo from "../../assets/Leonardo.webp";
 
 export default function Inicio() {
   const [githubMenuOpen, setGithubMenuOpen] = useState(false);
