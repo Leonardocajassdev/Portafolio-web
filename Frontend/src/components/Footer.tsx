@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 
         {/* Iconos a la derecha */}
         <div className="flex gap-5">
-          <a href="https://wa.me/573214641038/?text=urlencodedtext" target="_blank" rel="noopener noreferrer" className="hover:text-green-500 transition-colors">
+          <a href="https://wa.me/573214641038/?text=Hola soy ..." target="_blank" rel="noopener noreferrer" className="hover:text-green-500 transition-colors">
             <IconBrandWhatsapp size={25} />
           </a>
         </div>
