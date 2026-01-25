@@ -41,7 +41,7 @@ const Education: React.FC = () => {
                 
                 title: "Ingeniería de Sistemas",
                 institution: "Universidad Nacional Abierta y a Distancia (UNAD)",
-                date: "2022 - 2028 (En curso)",
+                date: "2022 - 2027 (En curso)",
                 logo: LogoUniversidad,
                 website: "https://www.unad.edu.co",
                 description:

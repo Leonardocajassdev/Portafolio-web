@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGraduationCap } from "react-icons/fa";
+import { IconSchool } from '@tabler/icons-react';
 
 interface EducationItem {
   title: string;          // Carrera / Curso
@@ -21,7 +21,7 @@ const EduList: React.FC<EduListProps> = ({ education }) => {
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <div className="p-3 rounded-xl bg-blue-600/20 text-blue-400">
-          <FaGraduationCap className="text-lg" />
+          <IconSchool stroke={2} />
         </div>
       </div>
 
