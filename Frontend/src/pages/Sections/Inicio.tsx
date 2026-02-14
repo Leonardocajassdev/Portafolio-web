@@ -24,7 +24,7 @@ export default function Inicio() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen bg-black flex items-center justify-center px-8 md:px-20 lg:px-40 overflow-hidden"
+      className="relative min-h-screen bg-black flex items-center justify-center px-8 md:px-20 lg:px-40 overflow-hidden pt-24 md:pt-0"
     >
       {/* Fondo azul difuminado */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[350px] bg-blue-500 opacity-45 blur-[90px] rounded-b-full z-0"></div>
