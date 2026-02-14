@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import CardProject from "../../components/ProjectCard";
 import { IconFolderCode, IconPinFilled } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
 
 // Importar imágenes
 import GestiAgroP from "../../assets/GestiAgroP.webp";
 import CanculatorPy from "../../assets/CanculatorPy.webp";
 import CRUDempleados from "../../assets/CRUDempleados.webp";
 
+
 const Proyectos: React.FC = () => {
   const [showMore, setShowMore] = useState(false);
+  const { t } = useTranslation();
 
-  const shortDescription =
-    "GestiAgro es una aplicación web para la gestión agrícola que integra tres roles principales (administrador, ingeniero agrónomo y mayordomo).";
-  const fullDescription =
-    "GestiAgro es una aplicación web para la gestión agrícola que integra tres roles principales (administrador, ingeniero agrónomo y mayordomo). Fue desarrollada por tres colaboradores de la misma universidad bajo metodologías ágiles y control de versiones, incorporando principios de seguridad como control de acceso y gestión de cuentas. El sistema se comunica mediante una API, sigue el patrón MVC y utiliza una base de datos en la nube. Este ha sido el proyecto más grande en el que he participado hasta la fecha, representando un gran reto que nos dejó valioso aprendizaje.";
+  const shortDescription = t("projects.list.0.shortDescription");
+  const fullDescription = t("projects.list.0.fullDescription");
 
   return (
     <section
@@ -31,7 +32,7 @@ const Proyectos: React.FC = () => {
             className="font-extrabold text-2xl text-white"
             style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
           >
-            Proyectos
+            {t("projects.title")}
           </h2>
 
           <IconFolderCode
@@ -40,18 +41,14 @@ const Proyectos: React.FC = () => {
         </div>
 
         <p className="text-white mb-10 text-base">
-          Mis proyectos más importantes en mi trayectoria como desarrollador.
-          Cada proyecto ha sido un reto y el resultado de mi dedicación y pasión
-          por la programación. Cada uno de ellos me ha ayudado a adquirir nuevas
-          habilidades, transformando ideas en realidades digitales. ¡Explora e
-          inspírate con mis proyectos!
+          {t("projects.description")}
         </p>
 
         {/* LISTA VERTICAL (flex-col)  */}
         <div className="flex flex-col gap-6 mt-6">
           <CardProject
             image={GestiAgroP}
-            title="GestiAgro"
+            title={t("projects.list.0.title")}
             description={
               <>
                 {showMore ? fullDescription : shortDescription}
@@ -59,7 +56,7 @@ const Proyectos: React.FC = () => {
                   onClick={() => setShowMore(!showMore)}
                   className="text-blue-400 ml-2 hover:underline"
                 >
-                  {showMore ? "Ver menos" : "Ver más"}
+                  {showMore ? t("projects.list.0.showLess") : t("projects.list.0.showMore")}
                 </button>
               </>
             }
@@ -73,16 +70,16 @@ const Proyectos: React.FC = () => {
 
           <CardProject
             image={CRUDempleados}
-            title="CRUD Empleados"
-            description="Aplicación web que permite gestionar empleados mediante un CRUD (crear, leer, actualizar y eliminar). Incluye búsqueda por ID, inicio de sesión y conexión a base de datos en phpMyAdmin (MySQL). El diseño es responsivo con Bootstrap."
+            title={t("projects.list.1.title")}
+            description={t("projects.list.1.description")}
             tags={["PHP", "Bootstrap"]}
             repoLink="https://github.com/Leonardocajassdev/CRUD-empleados"
           />
 
           <CardProject
             image={CanculatorPy}
-            title="Calculadora Python"
-            description="Calculadora desarrollada en Python con Tkinter, que permite realizar operaciones básicas (+, −, ×, ÷), uso de paréntesis y cálculo de raíces cuadradas. Incluye botones de borrado, limpieza total y una interfaz gráfica adaptable con estilos personalizados."
+            title={t("projects.list.2.title")}
+            description={t("projects.list.2.description")}
             tags={["Python"]}
             repoLink="https://github.com/Leonardocajassdev/Calculadora-python"
           />

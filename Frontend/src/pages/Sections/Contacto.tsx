@@ -1,7 +1,10 @@
 import React from "react";
 import { IconMailFilled, IconMessageDots } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
 
 const Contacto: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="contacto"
@@ -16,7 +19,7 @@ const Contacto: React.FC = () => {
             className="font-extrabold text-2xl text-white"
             style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
           >
-            Contacto
+            {t("contacto.title")}
           </h2>
 
           <IconMessageDots
@@ -28,8 +31,7 @@ const Contacto: React.FC = () => {
           {/* Información de contacto */}
           <div className="text-white space-y-6">
             <p className="text-base mb-10">
-              ¡Colaboremos! Siempre estoy abierto a conversar sobre proyectos
-              interesantes y nuevas oportunidades.
+              {t("contacto.intro")}
             </p>
 
             <div className="space-y-3 text-base">
@@ -37,6 +39,7 @@ const Contacto: React.FC = () => {
                 <a
                   href="mailto:cajasleonardosilva@gmail.com"
                   className="hover:scale-110 transition-transform duration-200"
+                  aria-label={t("contacto.emailAria")}
                 >
                   <IconMailFilled size={30} color="#3B82F6" />
                 </a>

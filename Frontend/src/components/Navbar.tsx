@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import { IconLanguageHiragana } from "@tabler/icons-react";
 
 const Navbar: React.FC = () => {
+  const { t, i18n } = useTranslation();
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
@@ -32,12 +36,11 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // 🔥 Scroll suave con offset
   const handleScrollTo = (id: string) => {
     const section = document.getElementById(id);
 
     if (section) {
-      const yOffset = -80; // altura del navbar
+      const yOffset = -80;
       const y =
         section.getBoundingClientRect().top +
         window.pageYOffset +
@@ -58,13 +61,13 @@ const Navbar: React.FC = () => {
   };
 
   const links = [
-    { id: "inicio", text: "Inicio" },
-    { id: "sobremi", text: "Sobre mí" },
-    { id: "educacion", text: "Educación" },
-    { id: "projects", text: "Mis proyectos" },
-    { id: "skills", text: "Skills" },
-    { id: "certificados", text: "Certificaciones" },
-    { id: "contacto", text: "Contacto" },
+    { id: "inicio", text: t("navbar.home") },
+    { id: "sobremi", text: t("navbar.about") },
+    { id: "educacion", text: t("navbar.education") },
+    { id: "projects", text: t("navbar.projects") },
+    { id: "skills", text: t("navbar.skills") },
+    { id: "certificados", text: t("navbar.certs") },
+    { id: "contacto", text: t("navbar.contact") },
   ];
 
   return (
@@ -78,43 +81,55 @@ const Navbar: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 md:px-16 py-3 flex items-center justify-between relative z-10">
         
         {/* Logo */}
-        <div className="flex items-center">
-          <h1
-            className="font-extrabold text-2xl text-white cursor-pointer"
-            style={{ textShadow: "0 0 3px rgba(255,255,255,0.6)" }}
-            onClick={() => handleScrollTo("inicio")}
+        <h1
+          className="font-extrabold text-2xl text-white cursor-pointer"
+          style={{ textShadow: "0 0 3px rgba(255,255,255,0.6)" }}
+          onClick={() => handleScrollTo("inicio")}
+        >
+          Codev
+        </h1>
+
+        {/* Desktop */}
+        <div className="hidden md:flex items-center gap-6 font-medium">
+          {links.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => handleScrollTo(link.id)}
+              className="text-sm transition-all duration-300 hover:scale-105"
+              style={
+                activeSection === link.id
+                  ? neonStyle
+                  : { color: "#fff" }
+              }
+            >
+              {link.text}
+            </button>
+          ))}
+
+          <button
+            onClick={() =>
+              i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
+            }
+            className="ml-4 px-3 py-1.5 rounded-full border border-white/20
+                      text-xs tracking-wide text-white
+                      bg-white/5 backdrop-blur-sm
+                      flex items-center gap-2
+                      transition-all duration-300
+                      hover:bg-blue-500/20 hover:border-blue-400
+                      animate-bounce-slow hover:animate-none"
           >
-            Codev
-          </h1>
+            <IconLanguageHiragana size={18} />
+            {i18n.language === "es" ? "EN" : "ES"}
+          </button>
         </div>
 
-        {/* Botón menú móvil */}
+        {/* Botón móvil */}
         <button
           className="text-white md:hidden z-20"
           onClick={toggleMenu}
-          aria-label="Abrir menú"
         >
           {isOpen ? <FaTimes size={26} /> : <FaBars size={26} />}
         </button>
-
-        {/* Links Desktop */}
-        <ul className="hidden md:flex gap-6 font-medium">
-          {links.map((link) => (
-            <li key={link.id}>
-              <button
-                onClick={() => handleScrollTo(link.id)}
-                className="text-sm transition-all duration-300 hover:scale-105"
-                style={
-                  activeSection === link.id
-                    ? neonStyle
-                    : { color: "#fff" }
-                }
-              >
-                {link.text}
-              </button>
-            </li>
-          ))}
-        </ul>
 
         {/* Menú móvil */}
         <div
@@ -136,6 +151,20 @@ const Navbar: React.FC = () => {
               {link.text}
             </button>
           ))}
+
+          {/* Botón idioma móvil */}
+          <button
+            onClick={() =>
+              i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
+            }
+            className="mt-6 px-4 py-2 rounded-full border border-white/20
+                       text-sm text-white
+                       bg-white/5 backdrop-blur-sm
+                       hover:bg-blue-500/20 hover:border-blue-400
+                       transition-all duration-300"
+          >
+            {i18n.language === "es" ? "Switch to English" : "Cambiar a Español"}
+          </button>
         </div>
       </div>
     </nav>

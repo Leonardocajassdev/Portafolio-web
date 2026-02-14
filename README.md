@@ -66,57 +66,6 @@ export default tseslint.config([
     },
   },
 ])
-```
 
-```
-Portafolio-web
-├─ backend
-│  ├─ app.py
-│  └─ requirements.txt
-├─ eslint.config.js
-├─ Frontend
-│  ├─ index.html
-│  ├─ package-lock.json
-│  ├─ package.json
-│  ├─ public
-│  │  ├─ CV-Leonardo-Cajas.pdf
-│  │  └─ Licon.png
-│  ├─ src
-│  │  ├─ App.tsx
-│  │  ├─ assets
-│  │  │  ├─ BadgeCiberseguridad.webp
-│  │  │  ├─ CanculatorPy.webp
-│  │  │  ├─ CRUDempleados.webp
-│  │  │  ├─ GestiAgroP.webp
-│  │  │  ├─ Leonardo.webp
-│  │  │  ├─ logoParroG.webp
-│  │  │  └─ Logo_unad.webp
-│  │  ├─ components
-│  │  │  ├─ CertCard.tsx
-│  │  │  ├─ EduList.tsx
-│  │  │  ├─ Footer.tsx
-│  │  │  ├─ Navbar.tsx
-│  │  │  ├─ ProjectCard.tsx
-│  │  │  └─ SkillCard.tsx
-│  │  ├─ index.css
-│  │  ├─ Layouts
-│  │  │  └─ Layout.tsx
-│  │  ├─ main.tsx
-│  │  ├─ pages
-│  │  │  ├─ Landing.tsx
-│  │  │  └─ Sections
-│  │  │     ├─ Cert.tsx
-│  │  │     ├─ Contacto.tsx
-│  │  │     ├─ Educacion.tsx
-│  │  │     ├─ Inicio.tsx
-│  │  │     ├─ Proyectos.tsx
-│  │  │     ├─ Skills.tsx
-│  │  │     └─ SobreMi.tsx
-│  │  └─ vite-env.d.ts
-│  ├─ tsconfig.app.json
-│  ├─ tsconfig.json
-│  ├─ tsconfig.node.json
-│  └─ vite.config.ts
-└─ README.md
 
-```
+

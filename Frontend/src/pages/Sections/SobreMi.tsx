@@ -1,6 +1,9 @@
 import { IconMoodUnamused } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
 
 export default function SobreMi() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="sobremi"
@@ -17,7 +20,7 @@ export default function SobreMi() {
             className="font-extrabold text-2xl text-white"
             style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
           >
-            Sobre mí
+            {t("sobremi.titulo")}
           </h2>
 
           <IconMoodUnamused
@@ -26,15 +29,15 @@ export default function SobreMi() {
         </div>
 
         <p className="text-white mb-3 text-base">
-          Desarrollador Full Stack con experiencia en el desarrollo de aplicaciones web modernas, combinando tecnologías frontend y backend para crear soluciones escalables, seguras y de alto rendimiento. Domino React.js, Node.js y Django REST Framework, además de contar con sólidos conocimientos en Python, JavaScript/TypeScript, HTML5, CSS3 y bases de datos relacionales y no relacionales como PostgreSQL y MongoDB.
+          {t("sobremi.parrafo1")}
         </p>
 
         <p className="text-white mb-3 text-base">
-          He participado en equipos ágiles bajo la metodología Scrum, contribuyendo al diseño, desarrollo e implementación de proyectos de diversa complejidad. Aplico buenas prácticas de arquitectura, control de versiones (Git/GitHub) y optimización del rendimiento tanto en el cliente como en el servidor.
+          {t("sobremi.parrafo2")}
         </p>
 
         <p className="text-white mb-3 text-base">
-          Me apasiona la ciberseguridad y deseo continuar formándome en esta área, orientando mi carrera hacia el desarrollo de software seguro y la protección de sistemas y datos.
+          {t("sobremi.parrafo3")}
         </p>
 
         <div className="flex flex-col justify-center sm:flex-row gap-10 text-white mt-10">
@@ -48,9 +51,9 @@ export default function SobreMi() {
             >
               3+
             </h3>
-            <p className="text-sm">Proyectos finalizados</p>
+            <p className="text-sm">{t("sobremi.stats.proyectos")}</p>
             <p className="text-xs opacity-70">
-              Trabajando con pasión y dedicación
+              {t("sobremi.stats.extra")}
             </p>
           </div>
         </div>

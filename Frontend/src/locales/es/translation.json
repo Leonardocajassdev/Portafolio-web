@@ -1,0 +1,109 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "education": "Educación",
+        "projects": "Mis proyectos",
+        "skills": "Skills",
+        "certs": "Certificaciones",
+        "contact": "Contacto"
+    },
+    "inicio": {
+        "titulo": "Hola, soy Leonardo Cajas",
+        "rol": "Software Developer",
+        "descripcion": "Apasionado por crear soluciones digitales innovadoras. Con experiencia en desarrollo, diseño web y backend, construyendo aplicaciones funcionales, atractivas y centradas en el usuario.",
+        "githubMas": "+2",
+        "correoAria": "Enviar correo a Leonardo Silva"
+    },
+    "sobremi": {
+        "titulo": "Sobre mí",
+        "parrafo1": "Desarrollador Full Stack con experiencia en el desarrollo de aplicaciones web modernas, combinando tecnologías frontend y backend para crear soluciones escalables, seguras y de alto rendimiento. Domino React.js, Node.js y Django REST Framework, además de contar con sólidos conocimientos en Python, JavaScript/TypeScript, HTML5, CSS3 y bases de datos relacionales y no relacionales como PostgreSQL y MongoDB.",
+        "parrafo2": "He participado en equipos ágiles bajo la metodología Scrum, contribuyendo al diseño, desarrollo e implementación de proyectos de diversa complejidad. Aplico buenas prácticas de arquitectura, control de versiones (Git/GitHub) y optimización del rendimiento tanto en el cliente como en el servidor.",
+        "parrafo3": "Me apasiona la ciberseguridad y deseo continuar formándome en esta área, orientando mi carrera hacia el desarrollo de software seguro y la protección de sistemas y datos.",
+        "stats": {
+            "proyectos": "Proyectos finalizados",
+            "extra": "Trabajando con pasión y dedicación"
+        }
+    },
+    "educacion": {
+        "titulo": "Educación",
+        "items": {
+            "software": {
+                "title": "Tecnólogo en Desarrollo de Software",
+                "institution": "Universidad Nacional Abierta y a Distancia (UNAD)",
+                "date": "2022 - 2025",
+                "description": "Formación tecnológica orientada al desarrollo de software, abarcando programación, ingeniería de software, metodologías de desarrollo y resolución de problemas aplicados a proyectos reales."
+            },
+            "ingenieria": {
+                "title": "Ingeniería de Sistemas",
+                "institution": "Universidad Nacional Abierta y a Distancia (UNAD)",
+                "date": "2022 - 2027 (En curso)",
+                "description": "Formación en ingeniería de sistemas orientada al diseño, desarrollo y gestión de sistemas de información y software, aplicando principios de ingeniería de software, manejo de datos y seguridad de la información."
+            },
+            "ingles": {
+                "title": "Inglés B2 (Avanzado)",
+                "institution": "ParroGlot Academy",
+                "date": "2025",
+                "description": "Formación en inglés avanzado, enfocada en comunicación técnica y profesional, con énfasis en comprensión auditiva, expresión oral y redacción técnica."
+            }
+        }
+    },
+    "projects": {
+        "title": "Proyectos",
+        "description": "Mis proyectos más importantes en mi trayectoria como desarrollador. Cada proyecto ha sido un reto y el resultado de mi dedicación y pasión por la programación. Cada uno de ellos me ha ayudado a adquirir nuevas habilidades, transformando ideas en realidades digitales. ¡Explora e inspírate con mis proyectos!",
+        "list": [
+            {
+                "title": "GestiAgro",
+                "shortDescription": "GestiAgro es una aplicación web para la gestión agrícola que integra tres roles principales (administrador, ingeniero agrónomo y mayordomo).",
+                "fullDescription": "GestiAgro es una aplicación web para la gestión agrícola que integra tres roles principales (administrador, ingeniero agrónomo y mayordomo). Fue desarrollada por tres colaboradores de la misma universidad bajo metodologías ágiles y control de versiones, incorporando principios de seguridad como control de acceso y gestión de cuentas. El sistema se comunica mediante una API, sigue el patrón MVC y utiliza una base de datos en la nube. Este ha sido el proyecto más grande en el que he participado hasta la fecha, representando un gran reto que nos dejó valioso aprendizaje.",
+                "repoLink": "https://github.com/Jefer526/GestiAgro",
+                "showMore": "Ver más",
+                "showLess": "Ver menos"
+            },
+            {
+                "title": "CRUD Empleados",
+                "description": "Aplicación web que permite gestionar empleados mediante un CRUD (crear, leer, actualizar y eliminar). Incluye búsqueda por ID, inicio de sesión y conexión a base de datos en phpMyAdmin (MySQL). El diseño es responsivo con Bootstrap.",
+                "repoLink": "https://github.com/Leonardocajassdev/CRUD-empleados"
+            },
+            {
+                "title": "Calculadora Python",
+                "description": "Calculadora desarrollada en Python con Tkinter, que permite realizar operaciones básicas (+, −, ×, ÷), uso de paréntesis y cálculo de raíces cuadradas. Incluye botones de borrado, limpieza total y una interfaz gráfica adaptable con estilos personalizados.",
+                "repoLink": "https://github.com/Leonardocajassdev/Calculadora-python"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Skills",
+        "description": "Te presento mis habilidades en diversas tecnologías que utilizo en mi desarrollo profesional. Estoy emocionado de seguir aprendiendo cada vez más, tanto de estas como de nuevas herramientas que surjan en el mundo del desarrollo de Software.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "tools": "Herramientas"
+        }
+    },
+    "certificados": {
+        "title": "Certificados",
+        "cards": [
+            {
+                "title": "Ciberseguridad de Google",
+                "issuer": "Coursera",
+                "tags": [
+                    "Ciberseguridad",
+                    "Gestión de Riesgos",
+                    "Seguridad de Redes",
+                    "Análisis de Amenazas",
+                    "Detección y Respuesta",
+                    "Linux/SQL",
+                    "Python",
+                    "Automatización"
+                ],
+                "credentialLink": "https://www.coursera.org/account/accomplishments/specialization/ASFNLU19M7XO"
+            }
+        ]
+    },
+    "contacto": {
+        "title": "Contacto",
+        "intro": "¡Colaboremos! Siempre estoy abierto a conversar sobre proyectos interesantes y nuevas oportunidades.",
+        "emailAria": "Enviar correo a Leonardo Cajas"
+    }
+}

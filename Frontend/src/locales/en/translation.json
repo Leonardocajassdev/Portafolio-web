@@ -1,0 +1,109 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About me",
+        "education": "Education",
+        "projects": "Projects",
+        "skills": "Skills",
+        "certs": "Certifications",
+        "contact": "Contact"
+    },
+    "inicio": {
+        "titulo": "Hi, I'm Leonardo Cajas",
+        "rol": "Software Developer",
+        "descripcion": "Passionate about creating innovative digital solutions. With experience in development, web design, and backend, building functional, attractive, and user-centered applications.",
+        "githubMas": "+2",
+        "correoAria": "Send email to Leonardo Silva"
+    },
+    "sobremi": {
+        "titulo": "About me",
+        "parrafo1": "Full Stack Developer with experience in developing modern web applications, combining frontend and backend technologies to create scalable, secure, and high-performance solutions. Proficient in React.js, Node.js, and Django REST Framework, along with strong knowledge of Python, JavaScript/TypeScript, HTML5, CSS3, and relational and non-relational databases such as PostgreSQL and MongoDB.",
+        "parrafo2": "I have participated in agile teams under the Scrum methodology, contributing to the design, development, and implementation of projects of varying complexity. I apply good architectural practices, version control (Git/GitHub), and performance optimization on both client and server sides.",
+        "parrafo3": "I am passionate about cybersecurity and wish to continue training in this area, orienting my career towards secure software development and protecting systems and data.",
+        "stats": {
+            "proyectos": "Completed projects",
+            "extra": "Working with passion and dedication"
+        }
+    },
+    "educacion": {
+        "titulo": "Education",
+        "items": {
+            "software": {
+                "title": "Technologist in Software Development",
+                "institution": "Universidad Nacional Abierta y a Distancia (UNAD)",
+                "date": "2022 - 2025",
+                "description": "Technological training oriented towards software development, covering programming, software engineering, development methodologies, and problem-solving applied to real projects."
+            },
+            "ingenieria": {
+                "title": "Systems Engineering",
+                "institution": "Universidad Nacional Abierta y a Distancia (UNAD)",
+                "date": "2022 - 2027 (Ongoing)",
+                "description": "Training in systems engineering oriented towards the design, development, and management of information systems and software, applying principles of software engineering, data management, and information security."
+            },
+            "ingles": {
+                "title": "English B2 (Advanced)",
+                "institution": "ParroGlot Academy",
+                "date": "2025",
+                "description": "Training in advanced English, focused on technical and professional communication, with an emphasis on listening comprehension, oral expression, and technical writing."
+            }
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "My most important projects in my journey as a developer. Each project has been a challenge and the result of my dedication and passion for programming. Each one has helped me acquire new skills, turning ideas into digital realities. Explore and get inspired by my projects!",
+        "list": [
+            {
+                "title": "GestiAgro",
+                "shortDescription": "GestiAgro is a web application for agricultural management that integrates three main roles (administrator, agronomist, and caretaker).",
+                "fullDescription": "GestiAgro is a web application for agricultural management that integrates three main roles (administrator, agronomist, and caretaker). It was developed by three collaborators from the same university using agile methodologies and version control, incorporating security principles such as access control and account management. The system communicates through an API, follows the MVC pattern, and uses a cloud database. This has been the largest project I have participated in so far, representing a great challenge that provided valuable learning.",
+                "repoLink": "https://github.com/Jefer526/GestiAgro",
+                "showMore": "Show more",
+                "showLess": "Show less"
+            },
+            {
+                "title": "CRUD Employees",
+                "description": "Web application that allows managing employees through a CRUD (create, read, update, and delete). Includes ID search, login, and connection to a database in phpMyAdmin (MySQL). The design is responsive using Bootstrap.",
+                "repoLink": "https://github.com/Leonardocajassdev/CRUD-empleados"
+            },
+            {
+                "title": "Python Calculator",
+                "description": "Calculator developed in Python with Tkinter, allowing basic operations (+, −, ×, ÷), parentheses, and square root calculations. Includes delete and clear buttons and a graphical interface adaptable with custom styles.",
+                "repoLink": "https://github.com/Leonardocajassdev/Calculadora-python"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Skills",
+        "description": "Here I present my skills in various technologies that I use in my professional development. I am excited to keep learning more, both from these and from new tools that emerge in the world of software development.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "tools": "Tools"
+        }
+    },
+    "certificados": {
+        "title": "Certificates",
+        "cards": [
+            {
+                "title": "Google Cybersecurity",
+                "issuer": "Coursera",
+                "tags": [
+                    "Cybersecurity",
+                    "Risk Management",
+                    "Network Security",
+                    "Threat Analysis",
+                    "Detection and Response",
+                    "Linux/SQL",
+                    "Python",
+                    "Automation"
+                ],
+                "credentialLink": "https://www.coursera.org/account/accomplishments/specialization/ASFNLU19M7XO"
+            }
+        ]
+    },
+    "contacto": {
+        "title": "Contact",
+        "intro": "Let's collaborate! I am always open to discuss interesting projects and new opportunities.",
+        "emailAria": "Send email to Leonardo Cajas"
+    }
+}

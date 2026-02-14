@@ -1,9 +1,12 @@
 import CertCard from "../../components/CertCard";
 import { IconCertificate } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
+
 // Importar archivo
 import BadgeCiberseguridad from "../../assets/BadgeCiberseguridad.webp";
 
 const Cert: React.FC = () => {
+  const { t } = useTranslation();
 
   return (
     <section
@@ -20,7 +23,7 @@ const Cert: React.FC = () => {
             className="font-extrabold text-2xl text-white"
             style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
           >
-            Certificados
+            {t("certificados.title")}
           </h2>
 
           <IconCertificate
@@ -34,23 +37,22 @@ const Cert: React.FC = () => {
           <div className="lg:col-span-1 md:col-span-2">
             <CertCard
               image={BadgeCiberseguridad}
-              title="Ciberseguridad de Google"
-              issuer="Coursera"
+              title={t("certificados.cards.0.title")}
+              issuer={t("certificados.cards.0.issuer")}
 
               tags={[
-                "Ciberseguridad",
-                "Gestión de Riesgos",
-                "Seguridad de Redes",
-                "Análisis de Amenazas",
-                "Detección y Respuesta",
-                "Linux/SQL",
-                "Python",
-                "Automatización",
+                t("certificados.cards.0.tags.0"),
+                t("certificados.cards.0.tags.1"),
+                t("certificados.cards.0.tags.2"),
+                t("certificados.cards.0.tags.3"),
+                t("certificados.cards.0.tags.4"),
+                t("certificados.cards.0.tags.5"),
+                t("certificados.cards.0.tags.6"),
+                t("certificados.cards.0.tags.7"),
               ]}
-              credentialLink="https://www.coursera.org/account/accomplishments/specialization/ASFNLU19M7XO"
+              credentialLink={t("certificados.cards.0.credentialLink")}
             />
           </div>
-
         </div>
       </div>
     </section>

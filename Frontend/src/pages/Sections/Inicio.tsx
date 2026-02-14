@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import { IconBrandLinkedin, IconBrandGithub, IconDownload, IconMail } from "@tabler/icons-react";
+import { IconBrandLinkedin, IconBrandGithub, IconMail } from "@tabler/icons-react";
 import Leonardo from "../../assets/Leonardo.webp";
+import { useTranslation } from "react-i18next";
 
 export default function Inicio() {
   const [githubMenuOpen, setGithubMenuOpen] = useState(false);
   const githubRef = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
 
   // Cerrar menú al hacer click fuera
   useEffect(() => {
@@ -34,17 +36,15 @@ export default function Inicio() {
         {/* Texto */}
         <div className="text-center md:text-left max-w-3xl flex flex-col items-center md:items-start">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Hola, soy Leonardo Cajas
+            {t("inicio.titulo")}
           </h1>
 
           <p className="typewriter text-2xl font-bold text-blue-100 mb-5">
-            Software Developer <span className="text-gray-200">&lt;/&gt;</span>
+            {t("inicio.rol")} <span className="text-gray-200">&lt;/&gt;</span>
           </p>
 
           <p className="text-lg text-gray-200 mb-6 leading-relaxed">
-            Apasionado por crear soluciones digitales innovadoras.
-            Con experiencia en desarrollo, diseño web y backend,
-            construyendo aplicaciones funcionales, atractivas y centradas en el usuario.
+            {t("inicio.descripcion")}
           </p>
 
           {/* Botones */}
@@ -97,21 +97,10 @@ export default function Inicio() {
             <a
               href="mailto:cajasleonardosilva@gmail.com"
               className="flex items-center gap-2 px-4 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-red-400 hover:shadow-[0_0_12px_rgba(239,68,68,0.6)] transition-all duration-300"
-              aria-label="Enviar correo a Leonardo Silva"
+              aria-label={t("inicio.correoAria")}
             >
               <IconMail size={20} />
             </a>
-
-            {/* Descargar CV */}
-            <a
-              href="/CV-Leonardo-Cajas.pdf"
-              download
-              className="flex items-center gap-2 px-4 py-2 border border-white/30 rounded-full bg-white/5 backdrop-blur-sm hover:scale-105 hover:border-green-400 transition-all duration-300"
-            >
-              <IconDownload size={20} />
-              Descargar CV
-            </a>
-
           </div>
         </div>
 

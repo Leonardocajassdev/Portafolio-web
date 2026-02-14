@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
 
 /* Animación escribir + borrar */
 @keyframes typing {
@@ -33,16 +41,11 @@
     animation: typing 6s steps(24, end) infinite, blink 0.75s step-end infinite;
   }
   
-/* color  para el placeholder */
-::placeholder {
-  color: #9ca3af; 
-  opacity: 1; /* Asegura que se vea igual en todos los navegadores */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
 }
-

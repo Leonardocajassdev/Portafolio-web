@@ -1,12 +1,15 @@
 import React from "react";
 import EduList from "../../components/EduList"; // ajusta la ruta si es necesario
 import { IconSchool } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
 
 // Logos
 import LogoUniversidad from "../../assets/Logo_unad.webp";
 import logoParroG from "../../assets/logoParroG.webp";
 
 const Education: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="educacion"
@@ -23,7 +26,7 @@ const Education: React.FC = () => {
             className="font-extrabold text-2xl text-white"
             style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
           >
-            Educación
+            {t("educacion.titulo")}
           </h2>
 
           <IconSchool
@@ -36,33 +39,29 @@ const Education: React.FC = () => {
             education={[
               {
 
-                title: "Tecnólogo en Desarrollo de Software",
-                institution: "Universidad Nacional Abierta y a Distancia (UNAD)",
-                date: "2022 - 2025",
+                title: t("educacion.items.software.title"),
+                institution: t("educacion.items.software.institution"),
+                date: t("educacion.items.software.date"),
                 logo: LogoUniversidad,
                 website: "https://www.unad.edu.co",
-                description:
-                  "Formación tecnológica orientada al desarrollo de software, abarcando programación, ingeniería de software, metodologías de desarrollo y resolución de problemas aplicados a proyectos reales."
-              },
+                description: t("educacion.items.software.description"),},
               {
                 
-                title: "Ingeniería de Sistemas",
-                institution: "Universidad Nacional Abierta y a Distancia (UNAD)",
-                date: "2022 - 2028 (En curso)",
+                title: t("educacion.items.ingenieria.title"),
+                institution: t("educacion.items.ingenieria.institution"),
+                date: t("educacion.items.ingenieria.date"),
                 logo: LogoUniversidad,
                 website: "https://www.unad.edu.co",
-                description:
-                  "Formación en ingeniería de sistemas orientada al diseño, desarrollo y gestión de sistemas de información y software, aplicando principios de ingeniería de software, manejo de datos y seguridad de la información."
+                description: t("educacion.items.ingenieria.description"),
               },
               {
         
-                title: "Inglés B2 (Avanzado)",
-                institution: "ParroGlot Academy",
-                date: "2025",
+                title: t("educacion.items.ingles.title"),
+                institution: t("educacion.items.ingles.institution"),
+                date: t("educacion.items.ingles.date"),
                 logo: logoParroG,
                 website: "https://www.parroglotlanguageacademy.com/",
-                description:
-                  "Formación en inglés avanzado, enfocada en comunicación técnica y profesional, con énfasis en comprensión auditiva, expresión oral y redacción técnica."
+                description: t("educacion.items.ingles.description"),
               }
             ]}
           />
