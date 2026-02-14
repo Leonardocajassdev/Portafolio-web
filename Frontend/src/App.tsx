@@ -1,4 +1,4 @@
-import React from 'react';
+
 import LandingPage from './pages/Landing';
 
 function App() {
