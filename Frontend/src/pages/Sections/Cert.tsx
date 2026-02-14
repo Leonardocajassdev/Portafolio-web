@@ -1,5 +1,5 @@
 import CertCard from "../../components/CertCard";
-
+import { IconCertificate } from "@tabler/icons-react";
 // Importar archivo
 import BadgeCiberseguridad from "../../assets/BadgeCiberseguridad.webp";
 
@@ -15,12 +15,18 @@ const Cert: React.FC = () => {
 
       {/* Contenedor principal */}
       <div className="max-w-5xl mx-auto p-4 relative z-10">
-        <h2
-          className="font-extrabold text-xl mb-6 text-white"
-          style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
-        >
-          Certificaciones
-        </h2>
+        <div className="flex items-center gap-3 mb-6">
+          <h2
+            className="font-extrabold text-2xl text-white"
+            style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
+          >
+            Certificados
+          </h2>
+
+          <IconCertificate
+            size={40}
+          />
+        </div>
         
         {/* Grid de proyectos */}
         <div className="grid md:grid-cols-3 xl:grid-cols-3 gap-8 mt-6">

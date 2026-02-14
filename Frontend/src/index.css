@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 /* Animación escribir + borrar */
 @keyframes typing {
     0%   { width: 0 }
@@ -18,34 +19,20 @@
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid rgb(143, 233, 233); /* cursor */
+    border-right: 2px solid rgb(167, 236, 238); /* cursor */
     width: 0;
   
     /* Texto con neón */
-    color: #caf7f6; 
+    color: #ffffff; 
     text-shadow: 
-      0 0 1px #5affff,
-      0 0 2px #54eded,
-      0 0 3px #34e0e0;
+      0 0 1px #ffffff,
+      0 0 1px #ffffff,
+      0 0 2px #ffffff;
   
   
     animation: typing 6s steps(24, end) infinite, blink 0.75s step-end infinite;
   }
   
-
-  /* ==== color del autocompletado en los inputs ==== */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset !important; /* Fondo  */
-  -webkit-text-fill-color: #ffffff !important; /* Texto  */
-  caret-color: #ffffff !important; /* Color del cursor */
-  transition: background-color 9999s ease-in-out 0s !important;
-}
-
 /* color  para el placeholder */
 ::placeholder {
   color: #9ca3af; 
@@ -58,3 +45,4 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+

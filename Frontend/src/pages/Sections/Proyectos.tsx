@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CardProject from "../../components/ProjectCard";
+import { IconFolderCode, IconPinFilled } from "@tabler/icons-react";
 
 // Importar imágenes
 import GestiAgroP from "../../assets/GestiAgroP.webp";
@@ -24,14 +25,21 @@ const Proyectos: React.FC = () => {
 
       {/* Contenedor principal (Mismo max-w-5xl original) */}
       <div className="max-w-5xl mx-auto p-4 relative z-10">
-        <h2
-          className="font-extrabold text-xl mb-6 text-white"
-          style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
-        >
-          Mis proyectos
-        </h2>
+        {/* Título con ícono */}
+        <div className="flex items-center gap-3 mb-6">
+          <h2
+            className="font-extrabold text-2xl text-white"
+            style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.6)" }}
+          >
+            Proyectos
+          </h2>
 
-        <p className="text-white mb-10 text-sm">
+          <IconFolderCode
+            size={40}
+          />
+        </div>
+
+        <p className="text-white mb-10 text-base">
           Mis proyectos más importantes en mi trayectoria como desarrollador.
           Cada proyecto ha sido un reto y el resultado de mi dedicación y pasión
           por la programación. Cada uno de ellos me ha ayudado a adquirir nuevas
@@ -39,7 +47,7 @@ const Proyectos: React.FC = () => {
           inspírate con mis proyectos!
         </p>
 
-        {/* LISTA VERTICAL (flex-col) en lugar de Grid */}
+        {/* LISTA VERTICAL (flex-col)  */}
         <div className="flex flex-col gap-6 mt-6">
           <CardProject
             image={GestiAgroP}
@@ -60,7 +68,7 @@ const Proyectos: React.FC = () => {
               "Python", "PostgreSQL", "Git", "GitHub", "...",
             ]}
             repoLink="https://github.com/Jefer526/GestiAgro"
-            label="Destacado"
+            label={<IconPinFilled size={30} />}
           />
 
           <CardProject

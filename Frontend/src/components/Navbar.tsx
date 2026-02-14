@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Íconos del menú
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,33 +12,55 @@ const Navbar: React.FC = () => {
 
       const sections = document.querySelectorAll("section[id]");
       let current = "";
+
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= 150 && rect.bottom >= 150) {
           current = section.getAttribute("id") || "";
         }
       });
+
       setActiveSection(current);
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
+  // 🔥 Scroll suave con offset
+  const handleScrollTo = (id: string) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      const yOffset = -80; // altura del navbar
+      const y =
+        section.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+    }
+
+    closeMenu();
+  };
 
   const neonStyle = {
     textShadow: "0 0 3px #fff, 0 0 6px #fff, 0 0 8px #fff",
     color: "#fff",
   };
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
   const links = [
     { id: "inicio", text: "Inicio" },
     { id: "sobremi", text: "Sobre mí" },
     { id: "educacion", text: "Educación" },
-
     { id: "projects", text: "Mis proyectos" },
     { id: "skills", text: "Skills" },
     { id: "certificados", text: "Certificaciones" },
@@ -47,18 +69,20 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-colors duration-500 ${
+      className={`fixed w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? "backdrop-blur-sm bg-gray-900/50 shadow-md"
+          ? "backdrop-blur-sm bg-gray-900/60 shadow-lg"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 md:px-16 py-3 flex items-center justify-between relative z-10">
+        
         {/* Logo */}
         <div className="flex items-center">
           <h1
-            className="font-extrabold text-2xl text-white"
-            style={{ textShadow: "0 0 3px rgba(255, 255, 255, 0.6)" }}
+            className="font-extrabold text-2xl text-white cursor-pointer"
+            style={{ textShadow: "0 0 3px rgba(255,255,255,0.6)" }}
+            onClick={() => handleScrollTo("inicio")}
           >
             Codev
           </h1>
@@ -73,19 +97,21 @@ const Navbar: React.FC = () => {
           {isOpen ? <FaTimes size={26} /> : <FaBars size={26} />}
         </button>
 
-        {/* Links - Desktop */}
-        <ul className="hidden md:flex gap-5 font-medium">
+        {/* Links Desktop */}
+        <ul className="hidden md:flex gap-6 font-medium">
           {links.map((link) => (
             <li key={link.id}>
-              <a
-                href={`#${link.id}`}
-                className="text-xs transition"
+              <button
+                onClick={() => handleScrollTo(link.id)}
+                className="text-sm transition-all duration-300 hover:scale-105"
                 style={
-                  activeSection === link.id ? neonStyle : { color: "#fff" }
+                  activeSection === link.id
+                    ? neonStyle
+                    : { color: "#fff" }
                 }
               >
                 {link.text}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
@@ -97,17 +123,18 @@ const Navbar: React.FC = () => {
           }`}
         >
           {links.map((link) => (
-            <a
+            <button
               key={link.id}
-              href={`#${link.id}`}
-              onClick={closeMenu}
-              className="text-lg font-medium"
+              onClick={() => handleScrollTo(link.id)}
+              className="text-lg font-medium transition-all duration-300 hover:scale-105"
               style={
-                activeSection === link.id ? neonStyle : { color: "#fff" }
+                activeSection === link.id
+                  ? neonStyle
+                  : { color: "#fff" }
               }
             >
               {link.text}
-            </a>
+            </button>
           ))}
         </div>
       </div>

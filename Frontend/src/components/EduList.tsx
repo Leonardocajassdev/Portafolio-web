@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGraduationCap } from "react-icons/fa";
+
 
 interface EducationItem {
   title: string;          // Carrera / Curso
@@ -17,13 +17,6 @@ interface EduListProps {
 const EduList: React.FC<EduListProps> = ({ education }) => {
   return (
     <div className="bg-gray-900 rounded-2xl p-6 hover:scale-103 transition-transform h-full">
-      
-      {/* Header */}
-      <div className="flex items-center gap-3 mb-6">
-        <div className="p-3 rounded-xl bg-blue-600/20 text-blue-400">
-          <FaGraduationCap className="text-lg" />
-        </div>
-      </div>
 
       {/* Education list */}
       <div className="flex flex-col divide-y divide-white/10">
@@ -40,7 +33,6 @@ const EduList: React.FC<EduListProps> = ({ education }) => {
               )}
             </div>
 
-            {/* Logo (clickeable solo la imagen) */}
             {item.logo && (
               item.website ? (
                 <a
@@ -48,26 +40,26 @@ const EduList: React.FC<EduListProps> = ({ education }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={`Visitar sitio oficial de ${item.institution}`}
-                  className="shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10
-                             flex items-center justify-center overflow-hidden
-                             hover:scale-105 hover:border-blue-500 transition
-                             cursor-pointer"
+                  className="shrink-0 w-16 h-16 rounded-xl bg-white/5 border border-white/10
+                            flex items-center justify-center overflow-hidden
+                            hover:scale-105 hover:border-blue-500 transition
+                            cursor-pointer"
                 >
                   <img
                     src={item.logo}
                     alt={item.institution}
-                    className="w-8 h-8 object-contain opacity-80 hover:opacity-100 transition"
+                    className="w-14 h-14 object-contain opacity-80 hover:opacity-100 transition"
                   />
                 </a>
               ) : (
                 <div
-                  className="shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10
-                             flex items-center justify-center overflow-hidden"
+                  className="shrink-0 w-16 h-16 rounded-xl bg-white/5 border border-white/10
+                            flex items-center justify-center overflow-hidden"
                 >
                   <img
                     src={item.logo}
                     alt={item.institution}
-                    className="w-8 h-8 object-contain opacity-80"
+                    className="w-10 h-10 object-contain opacity-80"
                   />
                 </div>
               )
@@ -75,7 +67,7 @@ const EduList: React.FC<EduListProps> = ({ education }) => {
 
             {/* Content */}
             <div className="flex flex-col gap-1">
-              <h4 className="text-sm font-semibold text-gray-100">
+              <h4 className="text-lg font-semibold text-gray-100">
                 {item.title}
               </h4>
 
@@ -88,7 +80,7 @@ const EduList: React.FC<EduListProps> = ({ education }) => {
               </span>
 
               {item.description && (
-                <p className="text-sm text-gray-300 mt-2 leading-relaxed">
+                <p className="text-base text-gray-300 mt-2 leading-relaxed">
                   {item.description}
                 </p>
               )}
