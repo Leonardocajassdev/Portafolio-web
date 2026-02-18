@@ -62,11 +62,11 @@ const Navbar: React.FC = () => {
 
   const links = [
     { id: "inicio", text: t("navbar.home") },
-    { id: "sobremi", text: t("navbar.about") },
     { id: "educacion", text: t("navbar.education") },
     { id: "projects", text: t("navbar.projects") },
     { id: "skills", text: t("navbar.skills") },
     { id: "certificados", text: t("navbar.certs") },
+    { id: "sobremi", text: t("navbar.about") },
     { id: "contacto", text: t("navbar.contact") },
   ];
 

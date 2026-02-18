@@ -41,7 +41,11 @@ const Contacto: React.FC = () => {
                   className="hover:scale-110 transition-transform duration-200"
                   aria-label={t("contacto.emailAria")}
                 >
-                  <IconMailFilled size={30} color="#3B82F6" />
+                  <IconMailFilled 
+                    size={30} 
+                    color="#3B82F6" 
+                    className="animate-shake-mail"
+                  />
                 </a>
                 cajasleonardosilva@gmail.com
               </p>

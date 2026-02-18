@@ -49,3 +49,16 @@ html, body {
 .animate-bounce-slow {
   animation: bounce-slow 2s infinite;
 }
+
+
+@keyframes shake-mail {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-6deg); }
+  40% { transform: rotate(6deg); }
+  60% { transform: rotate(-4deg); }
+  80% { transform: rotate(4deg); }
+}
+
+.animate-shake-mail {
+  animation: shake-mail 1s infinite ease-in-out;
+}

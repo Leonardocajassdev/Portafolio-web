@@ -12,11 +12,11 @@ const Landing: React.FC = () => {
   return (
     <Layout>
       <Inicio/>
-      <SobreMi />
       <Educacion />
       <Proyectos />
       <Skills />
       <Cert />
+      <SobreMi />
       <Contacto />
     </Layout>
   );
