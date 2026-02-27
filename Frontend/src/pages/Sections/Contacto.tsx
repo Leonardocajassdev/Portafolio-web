@@ -5,6 +5,10 @@ import { useTranslation } from "react-i18next";
 const Contacto: React.FC = () => {
   const { t } = useTranslation();
 
+  // Email oculto en Base64
+  const encodedEmail = "Y2FqYXNsZW9uYXJkb3NpbHZhQGdtYWlsLmNvbQ==";
+  const email = typeof window !== "undefined" ? atob(encodedEmail) : "";
+
   return (
     <section
       id="contacto"
@@ -22,9 +26,7 @@ const Contacto: React.FC = () => {
             {t("contacto.title")}
           </h2>
 
-          <IconMessageDots
-            size={40}
-          />
+          <IconMessageDots size={40} className="text-gray-200" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -37,17 +39,19 @@ const Contacto: React.FC = () => {
             <div className="space-y-3 text-base">
               <p className="flex items-center gap-3">
                 <a
-                  href="mailto:cajasleonardosilva@gmail.com"
+                  href={`mailto:${email}`}
                   className="hover:scale-110 transition-transform duration-200"
                   aria-label={t("contacto.emailAria")}
                 >
-                  <IconMailFilled 
-                    size={30} 
-                    color="#3B82F6" 
+                  <IconMailFilled
+                    size={30}
+                    color="#3B82F6"
                     className="animate-shake-mail"
                   />
                 </a>
-                cajasleonardosilva@gmail.com
+
+                {/* El email se renderiza dinámicamente */}
+                <span>{email}</span>
               </p>
             </div>
           </div>

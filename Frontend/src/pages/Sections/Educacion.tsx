@@ -31,6 +31,7 @@ const Education: React.FC = () => {
 
           <IconSchool
             size={40}
+            color="#bebe31"
           />
         </div>
         {/* Lista de educación */}

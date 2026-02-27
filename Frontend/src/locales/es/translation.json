@@ -62,7 +62,7 @@
             },
             {
                 "title": "CRUD Empleados",
-                "description": "Aplicación web que permite gestionar empleados mediante un CRUD (crear, leer, actualizar y eliminar). Incluye búsqueda por ID, inicio de sesión y conexión a base de datos en phpMyAdmin (MySQL). El diseño es responsivo con Bootstrap.",
+                "description": "Aplicación web que permite gestionar empleados mediante un CRUD. Incluye búsqueda por ID, inicio de sesión y conexión a base de datos en phpMyAdmin (MySQL). El diseño es responsivo con Bootstrap.",
                 "repoLink": "https://github.com/Leonardocajassdev/CRUD-empleados"
             },
             {
@@ -82,7 +82,7 @@
         }
     },
     "certificados": {
-        "title": "Certificados",
+        "title": "Certificaciones",
         "cards": [
             {
                 "title": "Ciberseguridad de Google",

@@ -28,6 +28,7 @@ const Cert: React.FC = () => {
 
           <IconCertificate
             size={40}
+            color="#db5c5c"
           />
         </div>
         

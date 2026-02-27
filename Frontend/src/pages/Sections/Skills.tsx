@@ -90,7 +90,8 @@ const Skills = () => {
             {t("skills.title")}
           </h2>
 
-          <IconCode size={40} />
+          <IconCode size={40} color="#f68f3b" />
+          
         </div>
         <p className="text-white text-base mb-7">{t("skills.description")}</p>
 

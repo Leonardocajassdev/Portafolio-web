@@ -23,9 +23,7 @@ export default function SobreMi() {
             {t("sobremi.titulo")}
           </h2>
 
-          <IconMoodUnamused
-            size={40}
-          />
+          <IconMoodUnamused size={40} />
         </div>
 
         <p className="text-white mb-3 text-base">
@@ -40,18 +38,17 @@ export default function SobreMi() {
           {t("sobremi.parrafo3")}
         </p>
 
+        {/* Stats */}
         <div className="flex flex-col justify-center sm:flex-row gap-10 text-white mt-10">
           <div className="text-center">
-            <h3
-              className="text-2xl font-bold text-blue-200"
-              style={{
-                textShadow:
-                  "0 0 8px rgba(0, 191, 255, 0.8), 0 0 16px rgba(0, 191, 255, 0.6)",
-              }}
-            >
+            <h3 className="text-2xl font-bold text-blue-200 animate-neon">
               3+
             </h3>
-            <p className="text-sm">{t("sobremi.stats.proyectos")}</p>
+
+            <p className="text-sm">
+              {t("sobremi.stats.proyectos")}
+            </p>
+
             <p className="text-xs opacity-70">
               {t("sobremi.stats.extra")}
             </p>

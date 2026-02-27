@@ -105,11 +105,11 @@ export default function Inicio() {
         </div>
 
         {/* Imagen (derecha en desktop) */}
-        <div className="flex-shrink-0">
+        <div className="flex justify-center md:justify-end w-full md:w-auto">
           <img
             src={Leonardo}
             alt="Leonardo"
-            className="w-11/12 md:w-96 h-auto rounded-full border-2 border-gray-900 shadow-xl"
+            className="w-64 sm:w-72 md:w-96 h-auto rounded-full border-2 border-gray-900 shadow-xl object-cover"
           />
         </div>
 

@@ -12,9 +12,9 @@ const Landing: React.FC = () => {
   return (
     <Layout>
       <Inicio/>
-      <Educacion />
       <Proyectos />
       <Skills />
+      <Educacion />
       <Cert />
       <SobreMi />
       <Contacto />

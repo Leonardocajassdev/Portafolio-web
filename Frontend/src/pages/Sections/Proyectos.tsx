@@ -37,6 +37,7 @@ const Proyectos: React.FC = () => {
 
           <IconFolderCode
             size={40}
+            color="#239b51"
           />
         </div>
 
